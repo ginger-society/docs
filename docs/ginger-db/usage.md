@@ -35,7 +35,11 @@ db-compose up
 
 This command brings up the database using a docker-compose setup. Ensure you have docker-compose installed and configured on your system.
 
-Configure a New Database Connection
+Two things will be available post sucessful run of this command. 
+    1. Data Studio ( http://localhost:STUDIO_PORT , eg. http://localhost:8000 by default ) and
+    2. A postgres SQL server with the username , password , port you entered earlier.
+
+# Configure a New Database Connection
 
 ```sh
 db-compose configure

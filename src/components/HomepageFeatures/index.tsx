@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
+import React from "react";
 
 type FeatureItem = {
   title: string;
@@ -26,6 +27,17 @@ const FeatureList: FeatureItem[] = [
       <>
         Build and test react components with Storybook like stories. PS, it
         generates react icons component from SVGs.
+      </>
+    ),
+  },
+  {
+    title: "GingerDB",
+    img: "/img/ginger-db.png",
+    description: (
+      <>
+        GingerDB lets you design your database structure and run instances
+        easily using command line. You get ORM models generator as well for TS,
+        Rust and Python
       </>
     ),
   },
