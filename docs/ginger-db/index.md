@@ -8,11 +8,11 @@
 - [Usage](/docs/ginger-db/usage)
 
 
-# Installation
+## Installation
 
 1. Ensure you have Rust installed. If not, install it from [rust-lang.org](https://www.rust-lang.org/).
 2. Clone the `db-compose` repository:
    ```sh
-   git clone <repository-url>
+   git clone https://github.com/ginger-society/ginger-DB-compose db-compose
 3. cd db-compose
-4. cargo build --release
+4. cargo install --path .
