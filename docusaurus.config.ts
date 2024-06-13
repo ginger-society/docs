@@ -72,6 +72,11 @@ const config: Config = {
           position: 'left',
           label: 'GingerDB',
         },
+        {
+          href: 'http://gingersociety.org',
+          label: 'Ginger Society Main Website',
+          position: 'right', // Positions the link to the right
+        },
       ],
     },
     footer: {
