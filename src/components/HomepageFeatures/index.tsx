@@ -7,6 +7,8 @@ type FeatureItem = {
   title: string;
   img: string;
   description: JSX.Element;
+  comingSoon?: boolean;
+  docsLink?: string;
 };
 
 const FeatureList: FeatureItem[] = [
@@ -19,6 +21,7 @@ const FeatureList: FeatureItem[] = [
         Redis , Postgres , ORM , Prometheus and more.
       </>
     ),
+    docsLink: "/docs/ginger-dj",
   },
   {
     title: "GingerBook",
@@ -29,6 +32,7 @@ const FeatureList: FeatureItem[] = [
         generates react icons component from SVGs.
       </>
     ),
+    docsLink: "/docs/ginger-book",
   },
   {
     title: "GingerDB",
@@ -40,6 +44,7 @@ const FeatureList: FeatureItem[] = [
         Rust and Python
       </>
     ),
+    docsLink: "/docs/ginger-db",
   },
   {
     title: "GingerJS",
@@ -50,20 +55,29 @@ const FeatureList: FeatureItem[] = [
         Python on the backend and React on the frontend.
       </>
     ),
+    comingSoon: true,
   },
   {
     title: "GingerUI",
     img: "/img/ginger-ui.png",
     description: <>Sleek classy React UI library using Uber's design system.</>,
+    comingSoon: true,
   },
   {
     title: "GingerCode",
     img: "/img/ginger-code.png",
     description: <>Container first Code editor.</>,
+    comingSoon: true,
   },
 ];
 
-function Feature({ title, img, description }: FeatureItem) {
+function Feature({
+  title,
+  img,
+  description,
+  comingSoon = false,
+  docsLink,
+}: FeatureItem) {
   return (
     <div className={clsx("col col--4")}>
       <div className="text--center">
@@ -72,6 +86,11 @@ function Feature({ title, img, description }: FeatureItem) {
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
+        {!comingSoon ? (
+          <a href={docsLink}>Read docs</a>
+        ) : (
+          <span>** Coming soon</span>
+        )}
         <p>{description}</p>
       </div>
     </div>
