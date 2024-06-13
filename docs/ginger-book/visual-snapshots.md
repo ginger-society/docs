@@ -3,15 +3,15 @@ id: visual-snapshots
 title: Visual Snapshots
 ---
 
-If you use stories to develop your React components, you might be also interested in some sort of test automation. Ladle and Playwright makes it easy to take screenshots of your stories and compare them against the previous version before you changed your code. We call this visual snapshot testing. Let's take a look at how you can automate it with Ladle. This solution is quick, free and self-hosted.
+If you use stories to develop your React components, you might be also interested in some sort of test automation. GingerBook and Playwright makes it easy to take screenshots of your stories and compare them against the previous version before you changed your code. We call this visual snapshot testing. Let's take a look at how you can automate it with GingerBook. This solution is quick, free and self-hosted.
 
-It might surprise you how easy it is - less than 10 lines of code! Ladle exports a static [meta.json](./meta) file that lists all your stories and their parameters. We can use this file to generate our tests. _Note: Terms snapshots and screenshots are used interchangeably._
+It might surprise you how easy it is - less than 10 lines of code! GingerBook exports a static [meta.json](./meta) file that lists all your stories and their parameters. We can use this file to generate our tests. _Note: Terms snapshots and screenshots are used interchangeably._
 
 Check the [working example](https://github.com/tajo/ladle/tree/main/e2e/playwright) right away. There is a more detailed walkthrough in the form of [blog post](/blog/visual-snapshots).
 
 ## Playwright
 
-[Playwright](https://playwright.dev/) is a great headless browser testing framework. It works cross-platform and cross-browser and has a nice TypeScript API. It also comes with a test runner. We use it to navigate through Ladle and capture screenshots. It can be installed as:
+[Playwright](https://playwright.dev/) is a great headless browser testing framework. It works cross-platform and cross-browser and has a nice TypeScript API. It also comes with a test runner. We use it to navigate through GingerBook and capture screenshots. It can be installed as:
 
 ```sh
 pnpm install @playwright/test
@@ -26,10 +26,10 @@ import { test, expect } from "@playwright/test";
 // we can't create tests asynchronously, thus using the sync-fetch lib
 import fetch from "sync-fetch";
 
-// URL where Ladle is served
+// URL where GingerBook is served
 const url = "http://localhost:61000";
 
-// fetch Ladle's meta file
+// fetch GingerBook's meta file
 // https://ladle.dev/docs/meta
 const stories = fetch(`${url}/meta.json`).json().stories;
 

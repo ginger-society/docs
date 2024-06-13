@@ -3,26 +3,26 @@ id: config
 title: Config
 ---
 
-Ladle does not require any configuration and some features can be controlled through CLI parameters. However, more advanced setups might require some configuration. There are a few different files you can create and use:
+GingerBook does not require any configuration and some features can be controlled through CLI parameters. However, more advanced setups might require some configuration. There are a few different files you can create and use:
 
 - [`.ladle/components.tsx`](./providers), used in browser only to enhance your stories or provide them a context
 - `.ladle/config.mjs`, used in browser and CLI to configure things like the story search pattern or addons visibility
-- `.ladle/head.html`, injects additional HTML into the `<head>` of Ladle. Can be handy to load additional fonts or stylesheets. Alternative to the [appendToHead](#appendtohead) parameter.
+- `.ladle/head.html`, injects additional HTML into the `<head>` of GingerBook. Can be handy to load additional fonts or stylesheets. Alternative to the [appendToHead](#appendtohead) parameter.
 - [`vite.config.{js|mjs|ts}`](https://vitejs.dev/config/#config-file-resolving), used only by Vite (CLI node environment) to change any parameters of the compilation (things like aliasing, dependency pre-bundling, babel plugins...) and some aspects of the dev server (open browser on start...). You should get familiar with Vite docs!
 
 ## vite.config.js
 
 - **[Documentation](https://vitejs.dev/config).**
-- The parameter `root` is replaced so Ladle can function properly.
-- [`server.port`](https://vitejs.dev/config/#server-port) and [`build.outDir`](https://vitejs.dev/config/#build-outdir) are overridden by Ladle as well, so they can be configured separately from your main project since you probably don't want them to clash.
-- Vite config assumes that paths are relative to the project root; however, Ladle's root is buried in `node_modules`. You should always use absolute paths. Ladle tries to resolve relative paths relative to the project root but that doesn't work when configuring custom plugins for example.
-- Ladle adds [@vitejs/plugin-react](https://www.npmjs.com/package/@vitejs/plugin-react) and [vite-tsconfig-paths](https://www.npmjs.com/package/vite-tsconfig-paths) plugins by default. If you need to customize them (for example adding babel presets into the React plugin), you can add them for yourself and Ladle will use yours.
+- The parameter `root` is replaced so GingerBook can function properly.
+- [`server.port`](https://vitejs.dev/config/#server-port) and [`build.outDir`](https://vitejs.dev/config/#build-outdir) are overridden by GingerBook as well, so they can be configured separately from your main project since you probably don't want them to clash.
+- Vite config assumes that paths are relative to the project root; however, GingerBook's root is buried in `node_modules`. You should always use absolute paths. GingerBook tries to resolve relative paths relative to the project root but that doesn't work when configuring custom plugins for example.
+- GingerBook adds [@vitejs/plugin-react](https://www.npmjs.com/package/@vitejs/plugin-react) and [vite-tsconfig-paths](https://www.npmjs.com/package/vite-tsconfig-paths) plugins by default. If you need to customize them (for example adding babel presets into the React plugin), you can add them for yourself and GingerBook will use yours.
 
 ## `.ladle/config.mjs`
 
 ### stories
 
-We use [globby](https://github.com/sindresorhus/globby), go there to learn about all possible search patterns. Ladle uses this parameter to find story files in your project.
+We use [globby](https://github.com/sindresorhus/globby), go there to learn about all possible search patterns. GingerBook uses this parameter to find story files in your project.
 
 The entry of stories supports string or array of strings
 
@@ -101,7 +101,7 @@ export default {
 
 ### defaultStory
 
-Change which story is loaded when Ladle starts. It's the `?story=` portion of URL. The default value is `""` - open the first story in alphabetical order. Must be serializable.
+Change which story is loaded when GingerBook starts. It's the `?story=` portion of URL. The default value is `""` - open the first story in alphabetical order. Must be serializable.
 
 ```js
 /** @type {import('@ladle/react').UserConfig} */
@@ -187,7 +187,7 @@ export default {
 
 ### appendToHead
 
-You can inject additional HTML into the `<head>` of Ladle:
+You can inject additional HTML into the `<head>` of GingerBook:
 
 ```js
 /** @type {import('@ladle/react').UserConfig} */
@@ -198,7 +198,7 @@ export default {
 
 The same effect can be achieved by creating a file `.ladle/head.html`.
 
-You can use this to modify the [Ladle's UI](https://github.com/tajo/ladle/blob/main/packages/ladle/lib/app/ladle.css), for example to remove margins around the stories:
+You can use this to modify the [GingerBook's UI](https://github.com/tajo/ladle/blob/main/packages/ladle/lib/app/ladle.css), for example to remove margins around the stories:
 
 ```js
 /** @type {import('@ladle/react').UserConfig} */
@@ -246,7 +246,7 @@ export default {
 
 ### addons
 
-You can enable or disable all Ladle addons (the buttons in the left bottom corner). You can also control their default state. Must be serializable.
+You can enable or disable all GingerBook addons (the buttons in the left bottom corner). You can also control their default state. Must be serializable.
 
 ```js
 /** @type {import('@ladle/react').UserConfig} */

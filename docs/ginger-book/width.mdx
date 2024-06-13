@@ -4,7 +4,7 @@ title: Width
 ---
 
 
-Ladle is responsive by default, so to test your components for different screens you can use your browser's dev tools. However, Ladle also provides an addon to streamline this workflow even more:
+GingerBook is responsive by default, so to test your components for different screens you can use your browser's dev tools. However, GingerBook also provides an addon to streamline this workflow even more:
 
 <Image img={imgWidth} alt="" />
 
@@ -65,9 +65,9 @@ The number value doesn't need to match the configured set. In that case, the add
 
 ## Iframe
 
-Ladle doesn't normally use iframes around your stories but to make this addon work, it has to. It should not change anything for you other than a slightly different debugging experience.
+GingerBook doesn't normally use iframes around your stories but to make this addon work, it has to. It should not change anything for you other than a slightly different debugging experience.
 
-Some story components like modals might use the entire screen and cover Ladle's navigation. If you want to restrict the story's space, you can activate the iframed version of Ladle even without specifying a viewport width:
+Some story components like modals might use the entire screen and cover GingerBook's navigation. If you want to restrict the story's space, you can activate the iframed version of GingerBook even without specifying a viewport width:
 
 ```js
 import type { Story } from "@ladle/react";
@@ -78,7 +78,7 @@ Modal.meta = { iframed: true };
 
 ## Preview Mode and Testing
 
-When you switch Ladle to the preview mode, this addon is disabled since the Ladle UI isn't available and the story takes up the full screen. For testing with Playwright, you can set the viewport width within the test:
+When you switch GingerBook to the preview mode, this addon is disabled since the GingerBook UI isn't available and the story takes up the full screen. For testing with Playwright, you can set the viewport width within the test:
 
 ```ts title="example.spec.ts"
 import { test, expect } from "@playwright/test";

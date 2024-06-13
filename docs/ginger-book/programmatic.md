@@ -3,7 +3,7 @@ id: programmatic
 title: Programmatic
 ---
 
-Ladle can be also used through its JavaScript API:
+GingerBook can be also used through its JavaScript API:
 
 ```tsx
 import serve from "@ladle/react/serve";

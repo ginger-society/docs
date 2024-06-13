@@ -5,11 +5,11 @@ title: Next.js
 
 # Next.js
 
-Next.js is a popular React framework that provides a lot of features out of the box. Ladle works well with Next.js, but there are some caveats.
+Next.js is a popular React framework that provides a lot of features out of the box. GingerBook works well with Next.js, but there are some caveats.
 
 ## `next/image` and `next/link`
 
-This component relies on a build-time transformation that Next.js provides. However, Ladle has its own build process. To make `next/image` work, we need to replace it with a simple `<img />` element.
+This component relies on a build-time transformation that Next.js provides. However, GingerBook has its own build process. To make `next/image` work, we need to replace it with a simple `<img />` element.
 
 You'll need to customize Vite's config. Place it in the root directory of your project.
 

@@ -3,7 +3,7 @@ id: meta
 title: Meta
 ---
 
-Ladle exports `meta.json` with the list of all stories and some additional information. In the `serve` mode, it is accessible as `http://localhost:61000/meta.json` and `build` just outputs `meta.json` into the build folder. Example:
+GingerBook exports `meta.json` with the list of all stories and some additional information. In the `serve` mode, it is accessible as `http://localhost:61000/meta.json` and `build` just outputs `meta.json` into the build folder. Example:
 
 ```json title="meta.json"
 {
@@ -60,7 +60,7 @@ This is useful for further automation. For example, you can load this file in yo
 
 ## Testing
 
-If you use Ladle for end-to-end testing with a framework as [Playwright](https://playwright.dev/), make sure your story is fully loaded before you run the test. Stories are code-split and loaded later in the process. Ladle adds `data-storyloaded` attribute to the `<html>` tag, so you can `await` for it in Playwright:
+If you use GingerBook for end-to-end testing with a framework as [Playwright](https://playwright.dev/), make sure your story is fully loaded before you run the test. Stories are code-split and loaded later in the process. GingerBook adds `data-storyloaded` attribute to the `<html>` tag, so you can `await` for it in Playwright:
 
 ```tsx
 await page.waitForSelector("[data-storyloaded]");

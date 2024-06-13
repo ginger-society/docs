@@ -4,11 +4,11 @@ title: Stories
 ---
 
 
-Stories are the entrypoint to your components. They are simple modules that export your components and can add additional metadata to describe and parametrize them. You can create them anywhere in your project's `src/` folder; they should be named as `*.stories.jsx` or `*.stories.tsx`. Ladle searches your project and loads all the stories into a single playground so you can develop and test them.
+Stories are the entrypoint to your components. They are simple modules that export your components and can add additional metadata to describe and parametrize them. You can create them anywhere in your project's `src/` folder; they should be named as `*.stories.jsx` or `*.stories.tsx`. GingerBook searches your project and loads all the stories into a single playground so you can develop and test them.
 
 ## Navigation and Routes
 
-Ladle automatically creates sidebar navigation and routes based on the filenames and names of exported stories:
+GingerBook automatically creates sidebar navigation and routes based on the filenames and names of exported stories:
 
 ```tsx title="src/my-components.stories.tsx"
 import type { Story } from "@ladle/react";
@@ -28,7 +28,7 @@ export const Simple: Story = () => (
 );
 ```
 
-Ladle creates three different routes and a tree navigation while following some simple naming conventions:
+GingerBook creates three different routes and a tree navigation while following some simple naming conventions:
 
 - First letter is capitalized
 - CamelCase is split into spaces
@@ -107,4 +107,4 @@ Renamed.storyName = newName;
 
 ### Story names and files need to be unique
 
-File names and named exports (or storyNames) are [normalized](#navigation-and-routes) and used together as a unique identifier for each story. There cannot be two stories with the same ID. If that occurs, Ladle tells you what stories and files are clashing and you need to rename something.
+File names and named exports (or storyNames) are [normalized](#navigation-and-routes) and used together as a unique identifier for each story. There cannot be two stories with the same ID. If that occurs, GingerBook tells you what stories and files are clashing and you need to rename something.

@@ -3,7 +3,7 @@ id: http2
 title: HTTP/2
 ---
 
-**You can significantly boost Ladle's dev server performance by activating HTTP/2**. How does it work? Ladle is powered by Vite and Vite serves each module individually over HTTP since it's not creating bundles.
+**You can significantly boost GingerBook's dev server performance by activating HTTP/2**. How does it work? GingerBook is powered by Vite and Vite serves each module individually over HTTP since it's not creating bundles.
 
 Some of the bigger stories might import hundreds or even thousands of modules. That's a lot of individual network requests. It can dramatically slow down the browser.
 
@@ -39,7 +39,7 @@ export default defineConfig({
 });
 ```
 
-That's it. Now you can run `pnpm ladle serve` and Ladle will be served over HTTP/2! The default URL `https://localhost:61000` should be automatically opened in your browser.
+That's it. Now you can run `pnpm ladle serve` and GingerBook will be served over HTTP/2! The default URL `https://localhost:61000` should be automatically opened in your browser.
 
 ## Alternatives
 

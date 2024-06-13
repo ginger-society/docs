@@ -35,7 +35,7 @@ export const MyStory: Story = () => {
 
 If the project contains valid PostCSS config (any format supported by [postcss-load-config](https://github.com/postcss/postcss-load-config), e.g. `postcss.config.js`), it will be automatically applied to all imported CSS.
 
-Ladle just defaults to [Vite's CSS handling](https://vitejs.dev/guide/features.html#css).
+GingerBook just defaults to [Vite's CSS handling](https://vitejs.dev/guide/features.html#css).
 
 ## Tailwind
 
@@ -136,4 +136,4 @@ export const Provider: GlobalProvider = ({ children, globalState }) => (
 );
 ```
 
-This will setup [BaseWeb](https://baseweb.design) component library, [Styletron](https://styletron.org/) and integrates Dark/Light themes with Ladle.
+This will setup [BaseWeb](https://baseweb.design) component library, [Styletron](https://styletron.org/) and integrates Dark/Light themes with GingerBook.

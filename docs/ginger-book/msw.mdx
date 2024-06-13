@@ -3,7 +3,7 @@ id: msw
 title: MSW
 ---
 
-Ladle has a build-in support for [MSW v2](https://mswjs.io/). It allows API mocking by intercepting requests on the network level.
+GingerBook has a build-in support for [MSW v2](https://mswjs.io/). It allows API mocking by intercepting requests on the network level.
 
 You just have to enable it in your `.ladle/config.mjs`:
 
@@ -18,7 +18,7 @@ export default {
 };
 ```
 
-Ladle automatically sets up the MSW service worker for you - copying it over into the public folder. Ladle also re-exports MSW library so you don't have to install it yourself.
+GingerBook automatically sets up the MSW service worker for you - copying it over into the public folder. GingerBook also re-exports MSW library so you don't have to install it yourself.
 
 ## Usage
 
@@ -75,7 +75,7 @@ When you need to setup node environment for MSW, you would use:
 import { setupServer } from 'msw/node'
 ```
 
-You can use the Ladle's version of MSW by using this import instead:
+You can use the GingerBook's version of MSW by using this import instead:
 
 ```js
 import { setupServer } from "@ladle/react/msw-node";
