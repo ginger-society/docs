@@ -66,12 +66,12 @@ const config: Config = {
           position: 'left',
           label: 'GingerBook',
         },
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'gingerJSSidebar',
-        //   position: 'left',
-        //   label: 'GingerJS',
-        // },
+        {
+          type: 'docSidebar',
+          sidebarId: 'gingerDBSidebar',
+          position: 'left',
+          label: 'GingerDB',
+        },
       ],
     },
     footer: {
