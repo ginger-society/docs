@@ -7,7 +7,7 @@ If you use stories to develop your React components, you might be also intereste
 
 It might surprise you how easy it is - less than 10 lines of code! GingerBook exports a static [meta.json](./meta) file that lists all your stories and their parameters. We can use this file to generate our tests. _Note: Terms snapshots and screenshots are used interchangeably._
 
-Check the [working example](https://github.com/tajo/ladle/tree/main/e2e/playwright) right away. There is a more detailed walkthrough in the form of [blog post](/blog/visual-snapshots).
+Check the [working example](https://github.com/tajo/ladle/tree/main/e2e/playwright) right away.
 
 ## Playwright
 
@@ -30,7 +30,7 @@ import fetch from "sync-fetch";
 const url = "http://localhost:61000";
 
 // fetch GingerBook's meta file
-// https://ladle.dev/docs/meta
+// https://ladle.dev/docs/ginger-book/meta
 const stories = fetch(`${url}/meta.json`).json().stories;
 
 // iterate through stories
@@ -68,4 +68,4 @@ Running 2 tests using 1 worker
   1 passed (952ms)
 ```
 
-You can keep adding more stories and they get automatically covered by visual snapshots. Again, there is also more detailed walkthrough in the form of [blog post](/blog/visual-snapshots) that you can follow.
+You can keep adding more stories and they get automatically covered by visual snapshots.

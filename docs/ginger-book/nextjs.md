@@ -47,7 +47,7 @@ This solution is inspired by [blog post](https://sdorra.dev/posts/2023-01-18-lad
 
 In the Stories file, using `useRouter()` of `next/navigation` may cause the following error. `Uncaught Error: invariant expected app router to be mounted.`
 
-You could solve it by setting [Providers](/docs/providers).
+You could solve it by setting [Providers](/docs/ginger-book/providers).
 
 ```tsx title=".ladle/components.tsx"
 import { GlobalProvider } from "@ladle/react";
@@ -83,7 +83,7 @@ export const Provider: GlobalProvider = ({ children }) => {
 };
 ```
 
-Or if you want to set it in each file, you could use [Decorators](/docs/decorators).
+Or if you want to set it in each file, you could use [Decorators](/docs/ginger-book/decorators).
 
 ```tsx title="./Hello.stories.tsx"
 import type { StoryDefault, Story } from "@ladle/react";
@@ -134,7 +134,7 @@ export const Hello: Story = () => {
 };
 ```
 
-If you want to wrap all stories with `AppRouterContext`, you can add it to the global [provider](/docs/providers) instead.
+If you want to wrap all stories with `AppRouterContext`, you can add it to the global [provider](/docs/ginger-book/providers) instead.
 
 ## Using environment variables
 

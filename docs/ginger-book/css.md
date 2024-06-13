@@ -9,7 +9,7 @@ You can import CSS files directly into your components or stories:
 import "./styles.css";
 ```
 
-If you want to use your stylesheet across all stories, you can create `.ladle/components.tsx` file and import it there. This file can be also used to specify a [global provider](/docs/providers). That can be useful for CSS-in-JS solutions.
+If you want to use your stylesheet across all stories, you can create `.ladle/components.tsx` file and import it there. This file can be also used to specify a [global provider](/docs/ginger-book/providers). That can be useful for CSS-in-JS solutions.
 
 ## CSS Modules
 

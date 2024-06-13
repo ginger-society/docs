@@ -27,7 +27,7 @@ There are also other features you might not even notice at first:
 
 ## Storybook interoperability
 
-GingerBook currently supports or partially supports most major features of the [Component Story Format](https://storybook.js.org/docs/react/api/csf). We are long-time users of Storybook, and it is our priority to make the transition between the two tools as seamless as possible (aka no changes in the user code). However, the goal is not to implement every single feature or addon that Storybook provides.
+GingerBook currently supports or partially supports most major features of the [Component Story Format](https://storybook.js.org/docs/ginger-book/react/api/csf). We are long-time users of Storybook, and it is our priority to make the transition between the two tools as seamless as possible (aka no changes in the user code). However, the goal is not to implement every single feature or addon that Storybook provides.
 
 Some features that are currently missing but are on our roadmap:
 

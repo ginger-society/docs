@@ -17,4 +17,4 @@ export default {
 
 GingerBook automatically disables the default SWC plugin.
 
-SWC is up to 20x faster than Babel and can supercharge your development experience. The only downside is that you can't utilize a rich ecosystem of Babel plugins if your project uses a special syntax. However, there are also a few SWC [plugins](https://github.com/swc-project/plugins) and there is a [plugin API](https://swc.rs/docs/plugin/ecmascript/getting-started) so you can write your own.
+SWC is up to 20x faster than Babel and can supercharge your development experience. The only downside is that you can't utilize a rich ecosystem of Babel plugins if your project uses a special syntax. However, there are also a few SWC [plugins](https://github.com/swc-project/plugins) and there is a [plugin API](https://swc.rs/docs/ginger-book/plugin/ecmascript/getting-started) so you can write your own.
