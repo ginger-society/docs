@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   plugins: [require.resolve('docusaurus-lunr-search')],
-  title: 'Ginger Socierty Documentation',
+  title: 'Ginger Society Documentation',
   tagline: 'We maintain mission critical open source softwares',
   favicon: 'img/ginger_mascot.ico',
 
