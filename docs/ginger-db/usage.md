@@ -10,9 +10,17 @@
 - **Configure**: Configure a new database connection in a project.
 - **Render**: Generate ORM model files as per the configuration.
 
+### Prerequisites
+
+Before you begin, ensure you have the following installed on your machine:
+
+- [Docker](https://www.docker.com/products/docker-desktop)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
 ## Running Commands
 
 ### Initialize a Database Project
+
 
 ```sh
 db-compose init
