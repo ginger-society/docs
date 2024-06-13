@@ -27,10 +27,7 @@ const FeatureList: FeatureItem[] = [
     title: "GingerBook",
     img: "/img/ginger-book.png",
     description: (
-      <>
-        Build and test react components with Storybook like stories. PS, it
-        generates react icons component from SVGs.
-      </>
+      <>Build and test react components with Storybook like stories.</>
     ),
     docsLink: "/docs/ginger-book",
   },
@@ -60,7 +57,12 @@ const FeatureList: FeatureItem[] = [
   {
     title: "GingerUI",
     img: "/img/ginger-ui.png",
-    description: <>Sleek classy React UI library using Uber's design system.</>,
+    description: (
+      <>
+        Sleek classy React UI library using Uber's design system. PS, it
+        generates react icons component from SVGs.
+      </>
+    ),
     comingSoon: true,
   },
   {
