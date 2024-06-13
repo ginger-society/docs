@@ -5,7 +5,7 @@
 
 ## Contents
 
-- [Usage](/docs/ginger-db/usage.md)
+- [Usage](/docs/ginger-db/usage)
 
 
 # Installation
