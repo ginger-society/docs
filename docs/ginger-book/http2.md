@@ -39,7 +39,7 @@ export default defineConfig({
 });
 ```
 
-That's it. Now you can run `pnpm ladle serve` and GingerBook will be served over HTTP/2! The default URL `https://localhost:61000` should be automatically opened in your browser.
+That's it. Now you can run `pnpm ginger-book serve` and GingerBook will be served over HTTP/2! The default URL `https://localhost:61000` should be automatically opened in your browser.
 
 ## Alternatives
 

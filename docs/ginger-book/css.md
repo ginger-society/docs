@@ -9,7 +9,7 @@ You can import CSS files directly into your components or stories:
 import "./styles.css";
 ```
 
-If you want to use your stylesheet across all stories, you can create `.ladle/components.tsx` file and import it there. This file can be also used to specify a [global provider](/docs/ginger-book/providers). That can be useful for CSS-in-JS solutions.
+If you want to use your stylesheet across all stories, you can create `.ginger-book/components.tsx` file and import it there. This file can be also used to specify a [global provider](/docs/ginger-book/providers). That can be useful for CSS-in-JS solutions.
 
 ## CSS Modules
 
@@ -23,7 +23,7 @@ Any CSS file ending with `.module.css` is considered a [CSS modules file](https:
 ```
 
 ```tsx
-import type { Story } from "@ladle/react";
+import type { Story } from "@ginger-society/ginger-book";
 import classes from "./example.module.css";
 
 export const MyStory: Story = () => {
@@ -39,7 +39,7 @@ GingerBook just defaults to [Vite's CSS handling](https://vitejs.dev/guide/featu
 
 ## Tailwind
 
-There is a working [example](https://github.com/tajo/ladle/blob/main/e2e/css/src/hello.stories.tsx#L11). You need to install `tailwindcss` and create
+There is a working [example](https://github.com/ginger-society/ginger-book/blob/main/e2e/css/src/hello.stories.tsx#L11). You need to install `tailwindcss` and create
 
 ```js title="postcss.config.js"
 module.exports = {
@@ -114,11 +114,11 @@ pnpm add baseui styletron-react styletron-engine-monolithic
 
 and create a global provider:
 
-```js title=".ladle/components.tsx"
+```js title=".ginger-book/components.tsx"
 import { Provider as StyletronProvider } from "styletron-react";
 import { Client as Styletron } from "styletron-engine-monolithic";
 import { LightTheme, DarkTheme, BaseProvider } from "baseui";
-import type { GlobalProvider } from "@ladle/react";
+import type { GlobalProvider } from "@ginger-society/ginger-book";
 
 const engine = new Styletron();
 

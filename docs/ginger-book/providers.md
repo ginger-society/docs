@@ -3,10 +3,10 @@ id: providers
 title: Providers
 ---
 
-Your components might need some global [React Context Provider](https://reactjs.org/docs/ginger-book/context.html#contextprovider). This is typically used for localization, state sharing or routing. You can add a provider to individual stories through [decorators](./stories#decorators). You can also create a global provider by adding `.ladle/components.tsx` (or `.ts`, `.jsx`, or `.js`):
+Your components might need some global [React Context Provider](https://reactjs.org/docs/ginger-book/context.html#contextprovider). This is typically used for localization, state sharing or routing. You can add a provider to individual stories through [decorators]. You can also create a global provider by adding `.ginger-book/components.tsx` (or `.ts`, `.jsx`, or `.js`):
 
-```tsx title=".ladle/components.tsx"
-import type { GlobalProvider } from "@ladle/react";
+```tsx title=".ginger-book/components.tsx"
+import type { GlobalProvider } from "@ginger-society/ginger-book";
 
 export const Provider: GlobalProvider = ({
   children,
@@ -30,7 +30,7 @@ Now, all stories will have the same heading. The global provider also has access
 GingerBook exports the `useGingerBookContext` hook that gives you full access to the whole internal `globalState` and a `dispatch` function, so you can also modify it within your stories. For example, your story can inspect and change the GingerBook theme. It can control all other addons as well. Example:
 
 ```tsx
-import { useGingerBookContext, ActionType, ThemeState } from "@ladle/react";
+import { useGingerBookContext, ActionType, ThemeState } from "@ginger-society/ginger-book";
 
 export const StoryChangingTheTheme = () => {
   const { globalState, dispatch } = useGingerBookContext();

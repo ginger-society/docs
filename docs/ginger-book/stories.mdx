@@ -11,14 +11,14 @@ Stories are the entrypoint to your components. They are simple modules that expo
 GingerBook automatically creates sidebar navigation and routes based on the filenames and names of exported stories:
 
 ```tsx title="src/my-components.stories.tsx"
-import type { Story } from "@ladle/react";
+import type { Story } from "@ginger-society/ginger-book";
 
 export const Button: Story = () => <button>My Button</button>;
 export const HeaderOne: Story = () => <h1>Header</h1>;
 ```
 
 ```tsx title="src/my-components--lists.stories.tsx"
-import type { Story } from "@ladle/react";
+import type { Story } from "@ginger-society/ginger-book";
 
 export const Simple: Story = () => (
   <ul>
@@ -43,7 +43,7 @@ GingerBook creates three different routes and a tree navigation while following 
 Sometimes it might be useful to ignore file/export names and set a custom name explicitly. A single story can be renamed as:
 
 ```tsx
-import type { Story } from "@ladle/react";
+import type { Story } from "@ginger-society/ginger-book";
 
 export const Button: Story = () => <button>My Button</button>;
 Button.storyName = "Renamed Button";
@@ -54,7 +54,7 @@ All story names and titles [need to be string literals](#limitations).
 You can also replace the filename (level name) part:
 
 ```tsx
-import type { StoryDefault, Story } from "@ladle/react";
+import type { StoryDefault, Story } from "@ginger-society/ginger-book";
 
 export default {
   title: "Level / Sub level",
@@ -77,7 +77,7 @@ There are limitations in place to support features like the automatic code-split
 ### `storyName`, `title` and `meta` need to be serializable
 
 ```tsx
-import type { StoryDefault, Story } from "@ladle/react";
+import type { StoryDefault, Story } from "@ginger-society/ginger-book";
 
 export default {
   title: "Welcome",
@@ -92,7 +92,7 @@ Renamed.storyName = "Renamed";
 however, this does not work
 
 ```tsx
-import type { StoryDefault, Story } from "@ladle/react";
+import type { StoryDefault, Story } from "@ginger-society/ginger-book";
 
 export default {
   title: "Welcome" + " Everybody",

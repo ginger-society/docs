@@ -3,10 +3,10 @@ id: decorators
 title: Decorators
 ---
 
-GingerBook supports story decorators, so you can wrap all stories in a file with additional React component(s). This is useful if your stories/components rely on [React Context](https://reactjs.org/docs/ginger-book/context.html) and libraries like `react-router`, `redux` or [next](https://ladle.dev/docs/ginger-book/nextjs/). In the example below, we are adding an extra `margin: 3em` to each story:
+GingerBook supports story decorators, so you can wrap all stories in a file with additional React component(s). This is useful if your stories/components rely on [React Context](https://reactjs.org/docs/context.html) and libraries like `react-router`, `redux` or [next](https://docs.gingersociety.org/docs/ginger-book/nextjs/). In the example below, we are adding an extra `margin: 3em` to each story:
 
 ```tsx
-import type { StoryDefault } from "@ladle/react";
+import type { StoryDefault } from "@ginger-society/ginger-book";
 
 export default {
   decorators: [
@@ -24,7 +24,7 @@ export default {
 Decorators can be also applied to a specific story:
 
 ```tsx
-import type { Story } from "@ladle/react";
+import type { Story } from "@ginger-society/ginger-book";
 
 export const MyStory: Story = () => <div>My Story</div>;
 
@@ -42,7 +42,7 @@ MyStory.decorators = [
 You can also access GingerBook's context through the second parameter. This way, your decorators can control every aspect of GingerBook, including the state of controls and other addons:
 
 ```tsx
-import type { StoryDefault, Story } from "@ladle/react";
+import type { StoryDefault, Story } from "@ginger-society/ginger-book";
 
 type Props = { label: string };
 

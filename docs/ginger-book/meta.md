@@ -8,8 +8,8 @@ GingerBook exports `meta.json` with the list of all stories and some additional 
 ```json title="meta.json"
 {
   "about": {
-    "homepage": "https://www.ladle.dev",
-    "github": "https://github.com/tajo/ladle",
+    "homepage": "https://www.ginger-book.dev",
+    "github": "https://github.com/ginger-society/ginger-book",
     "version": 1
   },
   "stories": {

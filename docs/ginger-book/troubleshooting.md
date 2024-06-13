@@ -6,19 +6,19 @@ title: Troubleshooting
 If you run into problems, try to enable verbose output:
 
 ```bash
-DEBUG=ladle* pnpm ladle serve
-DEBUG=ladle* pnpm ladle build
+DEBUG=ginger-book* pnpm ginger-book serve
+DEBUG=ginger-book* pnpm ginger-book build
 ```
 
-You can also enable verbose output in the browser console by adding an item into local storage `debug: ladle*` where `debug` is the key and `ladle*` the value. In Chrome, you can do that by opening the dev tools and insert this into the console:
+You can also enable verbose output in the browser console by adding an item into local storage `debug: ginger-book*` where `debug` is the key and `ginger-book*` the value. In Chrome, you can do that by opening the dev tools and insert this into the console:
 
 ```
-localStorage.debug = 'ladle*'
+localStorage.debug = 'ginger-book*'
 ```
 
 ## Create Issue
 
-You can also search [existing issues](https://github.com/tajo/ladle/issues) or add a new one.
+You can also search [existing issues](https://github.com/ginger-society/ginger-book/issues) or add a new one.
 
 ## Discord
 

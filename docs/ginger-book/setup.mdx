@@ -14,21 +14,21 @@ GingerBook is a single package and command that does not require any initial con
 <TabItem value="pnpm" label="pnpm">
 
 ```bash
-pnpm add @ladle/react
+pnpm add @ginger-society/ginger-book
 ```
 
 </TabItem>
 <TabItem value="npm" label="npm">
 
 ```bash
-npm install @ladle/react
+npm install @ginger-society/ginger-book
 ```
 
 </TabItem>
 <TabItem value="yarn" label="yarn">
 
 ```bash
-yarn add @ladle/react
+yarn add @ginger-society/ginger-book
 ```
 
 </TabItem>
@@ -58,21 +58,21 @@ import * as React from "react";
 <TabItem value="pnpm" label="pnpm">
 
 ```bash
-pnpm ladle serve
+pnpm ginger-book serve
 ```
 
 </TabItem>
 <TabItem value="npm" label="npm">
 
 ```bash
-npx ladle serve
+npx ginger-book serve
 ```
 
 </TabItem>
 <TabItem value="yarn" label="yarn">
 
 ```bash
-yarn ladle serve
+yarn ginger-book serve
 ```
 
 </TabItem>
@@ -86,21 +86,21 @@ Development mode. It will start a dev server and open your browser. This is idea
 <TabItem value="pnpm" label="pnpm">
 
 ```bash
-pnpm ladle build
+pnpm ginger-book build
 ```
 
 </TabItem>
 <TabItem value="npm" label="npm">
 
 ```bash
-npx ladle build
+npx ginger-book build
 ```
 
 </TabItem>
 <TabItem value="yarn" label="yarn">
 
 ```bash
-yarn ladle build
+yarn ginger-book build
 ```
 
 </TabItem>
@@ -114,21 +114,21 @@ You need to serve it through a http server. GingerBook has the `preview` command
 <TabItem value="pnpm" label="pnpm">
 
 ```bash
-pnpm ladle preview
+pnpm ginger-book preview
 ```
 
 </TabItem>
 <TabItem value="npm" label="npm">
 
 ```bash
-npx ladle preview
+npx ginger-book preview
 ```
 
 </TabItem>
 <TabItem value="yarn" label="yarn">
 
 ```bash
-yarn ladle preview
+yarn ginger-book preview
 ```
 
 </TabItem>
@@ -142,44 +142,41 @@ This is a full set of commands you can follow to get a basic setup from scratch:
 <TabItem value="pnpm" label="pnpm">
 
 ```bash
-mkdir my-ladle
-cd my-ladle
+mkdir my-ui-project
+cd my-ui-project
 pnpm init
-pnpm add @ladle/react react react-dom
+pnpm add @ginger-society/ginger-book react react-dom
 mkdir src
 echo "export const World = () => <p>Hey</p>;" > src/hello.stories.tsx
-pnpm ladle serve
+pnpm ginger-book serve
 ```
 
 </TabItem>
 <TabItem value="yarn" label="yarn">
 
 ```bash
-mkdir my-ladle
-cd my-ladle
+mkdir my-ui-project
+cd my-ui-project
 yarn init --yes
-yarn add @ladle/react react react-dom
+yarn add @ginger-society/ginger-book react react-dom
 mkdir src
 echo "export const World = () => <p>Hey</p>;" > src/hello.stories.tsx
-yarn ladle serve
+yarn ginger-book serve
 ```
 
 </TabItem>
 <TabItem value="npm" label="npm">
 
 ```bash
-mkdir my-ladle
-cd my-ladle
+mkdir my-ui-project
+cd my-ui-project
 npm init --yes
-npm install @ladle/react react react-dom
+npm install @ginger-society/ginger-book react react-dom
 mkdir src
 echo "export const World = () => <p>Hey</p>;" > src/hello.stories.tsx
-npx ladle serve
+npx ginger-book serve
 ```
 
 </TabItem>
 </Tabs>
 
-## StackBlitz
-
-You can also try ladle in your browser through our StackBlitz [template](https://ladle.dev/new).

@@ -5,9 +5,9 @@ title: Config
 
 GingerBook does not require any configuration and some features can be controlled through CLI parameters. However, more advanced setups might require some configuration. There are a few different files you can create and use:
 
-- [`.ladle/components.tsx`](./providers), used in browser only to enhance your stories or provide them a context
-- `.ladle/config.mjs`, used in browser and CLI to configure things like the story search pattern or addons visibility
-- `.ladle/head.html`, injects additional HTML into the `<head>` of GingerBook. Can be handy to load additional fonts or stylesheets. Alternative to the [appendToHead](#appendtohead) parameter.
+- [`.ginger-book/components.tsx`](./providers), used in browser only to enhance your stories or provide them a context
+- `.ginger-book/config.mjs`, used in browser and CLI to configure things like the story search pattern or addons visibility
+- `.ginger-book/head.html`, injects additional HTML into the `<head>` of GingerBook. Can be handy to load additional fonts or stylesheets. Alternative to the [appendToHead](#appendtohead) parameter.
 - [`vite.config.{js|mjs|ts}`](https://vitejs.dev/config/#config-file-resolving), used only by Vite (CLI node environment) to change any parameters of the compilation (things like aliasing, dependency pre-bundling, babel plugins...) and some aspects of the dev server (open browser on start...). You should get familiar with Vite docs!
 
 ## vite.config.js
@@ -18,7 +18,7 @@ GingerBook does not require any configuration and some features can be controlle
 - Vite config assumes that paths are relative to the project root; however, GingerBook's root is buried in `node_modules`. You should always use absolute paths. GingerBook tries to resolve relative paths relative to the project root but that doesn't work when configuring custom plugins for example.
 - GingerBook adds [@vitejs/plugin-react](https://www.npmjs.com/package/@vitejs/plugin-react) and [vite-tsconfig-paths](https://www.npmjs.com/package/vite-tsconfig-paths) plugins by default. If you need to customize them (for example adding babel presets into the React plugin), you can add them for yourself and GingerBook will use yours.
 
-## `.ladle/config.mjs`
+## `.ginger-book/config.mjs`
 
 ### stories
 
@@ -29,7 +29,7 @@ The entry of stories supports string or array of strings
 String:
 
 ```js
-/** @type {import('@ladle/react').UserConfig} */
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   stories: "src/**/*.stories.{js,jsx,ts,tsx,mdx}",
 };
@@ -38,7 +38,7 @@ export default {
 Array of strings:
 
 ```js
-/** @type {import('@ladle/react').UserConfig} */
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   stories: ["src/**/control.stories.{js,jsx,ts,tsx}", "src/stories.custom.tsx"],
 };
@@ -49,7 +49,7 @@ export default {
 Specify the dev server host.
 
 ```js
-/** @type {import('@ladle/react').UserConfig} */
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   host: "0.0.0.0",
 };
@@ -60,7 +60,7 @@ export default {
 Specify the preview server host.
 
 ```js
-/** @type {import('@ladle/react').UserConfig} */
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   previewHost: "0.0.0.0",
 };
@@ -71,7 +71,7 @@ export default {
 Specify the dev server port.
 
 ```js
-/** @type {import('@ladle/react').UserConfig} */
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   port: 61000,
 };
@@ -82,7 +82,7 @@ export default {
 Specify the preview server port.
 
 ```js
-/** @type {import('@ladle/react').UserConfig} */
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   previewPort: 8080,
 };
@@ -93,7 +93,7 @@ export default {
 Specify the output directory (relative to the project root).
 
 ```js
-/** @type {import('@ladle/react').UserConfig} */
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   outDir: "build",
 };
@@ -104,7 +104,7 @@ export default {
 Change which story is loaded when GingerBook starts. It's the `?story=` portion of URL. The default value is `""` - open the first story in alphabetical order. Must be serializable.
 
 ```js
-/** @type {import('@ladle/react').UserConfig} */
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   defaultStory: "a11y--welcome",
 };
@@ -117,7 +117,7 @@ Change the order of stories in the navigation . By default, stories are sorted a
 #### Default setting
 
 ```js
-/** @type {import('@ladle/react').UserConfig} */
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   // note that alphabetically sorted stories are provided
   storyOrder: (stories) => stories,
@@ -127,7 +127,7 @@ export default {
 #### Using an array
 
 ```js
-/** @type {import('@ladle/react').UserConfig} */
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   storyOrder: ["folder--story1", "folder--story2"],
 };
@@ -136,7 +136,7 @@ export default {
 #### Using an function
 
 ```js
-/** @type {import('@ladle/react').UserConfig} */
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   storyOrder: () => ["folder--story1", "folder--story2"],
 };
@@ -155,7 +155,7 @@ A wildcard can be used in both cases to match and sort multiple stories at once.
 Override the path for the [Vite config](https://vitejs.dev/config). By default, `vite.config.{js|mjs|ts}` and `vite.config.ts` in the project root are being checked.
 
 ```js
-/** @type {import('@ladle/react').UserConfig} */
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   viteConfig: process.cwd() + "/ladle-vite.config.ts",
 };
@@ -166,7 +166,7 @@ export default {
 Base path for building the output; useful for e.g. hosting your project's storybook on GitHub Pages. Must be serializable.
 
 ```js
-/** @type {import('@ladle/react').UserConfig} */
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   base: "/my-project/",
 };
@@ -179,7 +179,7 @@ Vite [mode](https://vitejs.dev/guide/env-and-mode.html#modes). If not set, defau
 This also affects [Vite's .env file loading](https://vitejs.dev/guide/env-and-mode.html#env-files), as well as anything else setting `mode` affects. Must be serializable.
 
 ```js
-/** @type {import('@ladle/react').UserConfig} */
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   mode: "my-custom-mode",
 };
@@ -190,21 +190,21 @@ export default {
 You can inject additional HTML into the `<head>` of GingerBook:
 
 ```js
-/** @type {import('@ladle/react').UserConfig} */
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   appendToHead: "<style>h1 {color:pink}</style>",
 };
 ```
 
-The same effect can be achieved by creating a file `.ladle/head.html`.
+The same effect can be achieved by creating a file `.ginger-book/head.html`.
 
-You can use this to modify the [GingerBook's UI](https://github.com/tajo/ladle/blob/main/packages/ladle/lib/app/ladle.css), for example to remove margins around the stories:
+You can use this to modify the [GingerBook's UI](https://github.com/ginger-society/ginger-book/blob/main/packages/ginger-book/lib/app/ginger-book.css), for example to remove margins around the stories:
 
 ```js
-/** @type {import('@ladle/react').UserConfig} */
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   appendToHead: `<style>
-    :root {--ladle-main-padding: 0; --ladle-main-padding-mobile: 0;}
+    :root {--ginger-book-main-padding: 0; --ginger-book-main-padding-mobile: 0;}
   </style>`,
 };
 ```
@@ -212,10 +212,10 @@ export default {
 Or to move the side navigation to the left:
 
 ```js
-/** @type {import('@ladle/react').UserConfig} */
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   appendToHead: `<style>
-    .ladle-wrapper { flex-direction: row-reverse; }
+    .ginger-book-wrapper { flex-direction: row-reverse; }
   </style>`,
 };
 ```
@@ -225,7 +225,7 @@ export default {
 You can customize the default set of hotkeys. You can assign multiple hotkeys for the same action. An emtpy array disables the hotkey. Use `meta` for `cmd` on macOS and `win` on Windows. `alt` is option on macOS.
 
 ```js
-/** @type {import('@ladle/react').UserConfig} */
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   hotkeys: {
     search: ["/", "meta+p"],
@@ -249,7 +249,7 @@ export default {
 You can enable or disable all GingerBook addons (the buttons in the left bottom corner). You can also control their default state. Must be serializable.
 
 ```js
-/** @type {import('@ladle/react').UserConfig} */
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   addons: {
     a11y: {
@@ -263,7 +263,7 @@ export default {
       enabled: true,
       defaultState: {},
     },
-    ladle: {
+    gingerBook: {
       enabled: true,
     },
     mode: {
@@ -304,7 +304,7 @@ export default {
 Disable the file system watcher when running the `serve` cli command.
 
 ```js
-/** @type {import('@ladle/react').UserConfig} */
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   noWatch: true,
 };

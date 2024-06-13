@@ -20,21 +20,21 @@ import { defineConfig } from "vite";
 export default defineConfig({
   resolve: {
     alias: {
-      "next/image": path.resolve(__dirname, "./.ladle/UnoptimizedImage.tsx"),
-      "next/link": path.resolve(__dirname, "./.ladle/UnoptimizedLink.tsx"),
+      "next/image": path.resolve(__dirname, "./.ginger-book/UnoptimizedImage.tsx"),
+      "next/link": path.resolve(__dirname, "./.ginger-book/UnoptimizedLink.tsx"),
     },
   },
 });
 ```
 
-```tsx title=".ladle/UnoptimizedLink.tsx"
+```tsx title=".ginger-book/UnoptimizedLink.tsx"
 const UnoptimizedLink = (props: any) => {
   return <a {...props} />;
 };
 export default UnoptimizedLink;
 ```
 
-```tsx title=".ladle/UnoptimizedImage.tsx"
+```tsx title=".ginger-book/UnoptimizedImage.tsx"
 const UnoptimizedImage = (props: any) => {
   return <img {...props} />;
 };
@@ -49,8 +49,8 @@ In the Stories file, using `useRouter()` of `next/navigation` may cause the foll
 
 You could solve it by setting [Providers](/docs/ginger-book/providers).
 
-```tsx title=".ladle/components.tsx"
-import { GlobalProvider } from "@ladle/react";
+```tsx title=".ginger-book/components.tsx"
+import { GlobalProvider } from "@ginger-society/ginger-book";
 import { AppRouterContext } from "next/dist/shared/lib/app-router-context";
 
 export const Provider: GlobalProvider = ({ children }) => {
@@ -86,7 +86,7 @@ export const Provider: GlobalProvider = ({ children }) => {
 Or if you want to set it in each file, you could use [Decorators](/docs/ginger-book/decorators).
 
 ```tsx title="./Hello.stories.tsx"
-import type { StoryDefault, Story } from "@ladle/react";
+import type { StoryDefault, Story } from "@ginger-society/ginger-book";
 import { AppRouterContext } from "next/dist/shared/lib/app-router-context";
 import { useRouter } from "next/navigation";
 

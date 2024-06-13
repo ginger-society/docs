@@ -16,16 +16,16 @@ GingerBook uses [jsx-runtime](https://reactjs.org/blog/2020/09/22/introducing-th
   "compilerOptions": {
     "jsx": "react-jsx"
   },
-  "include": ["src", ".ladle"]
+  "include": ["src", ".ginger-book"]
 }
 ```
 
 ## Exported Types
 
-You can import [many types](https://github.com/tajo/ladle/blob/main/packages/ladle/lib/app/exports.ts#L52-L115) from `@ladle/react` to improve your development experience:
+You can import [many types](https://github.com/ginger-society/ginger-book/blob/main/packages/ginger-book/lib/app/exports.ts#L52-L115) from `@ginger-society/ginger-book` to improve your development experience:
 
 ```ts
-import type { StoryDefault, Story } from "@ladle/react";
+import type { StoryDefault, Story } from "@ginger-society/ginger-book";
 
 type Props = { label: string };
 

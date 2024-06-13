@@ -6,9 +6,9 @@ title: Programmatic
 GingerBook can be also used through its JavaScript API:
 
 ```tsx
-import serve from "@ladle/react/serve";
-import build from "@ladle/react/build";
-import preview from "@ladle/react/preview";
+import serve from "@ginger-society/ginger-book/serve";
+import build from "@ginger-society/ginger-book/build";
+import preview from "@ginger-society/ginger-book/preview";
 
 await serve({
   // config: {}
@@ -21,4 +21,4 @@ await preview({
 });
 ```
 
-Explore all config.mjs [options](./config#ladleconfigmjs).
+Explore all config.mjs [options](./config#ginger-bookconfigmjs).

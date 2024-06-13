@@ -5,10 +5,10 @@ title: MSW
 
 GingerBook has a build-in support for [MSW v2](https://mswjs.io/). It allows API mocking by intercepting requests on the network level.
 
-You just have to enable it in your `.ladle/config.mjs`:
+You just have to enable it in your `.ginger-book/config.mjs`:
 
 ```js
-/** @type {import('@ladle/react').UserConfig} */
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   addons: {
     msw: {
@@ -23,8 +23,8 @@ GingerBook automatically sets up the MSW service worker for you - copying it ove
 ## Usage
 
 ```tsx
-import type { Story } from "@ladle/react";
-import { msw } from "@ladle/react";
+import type { Story } from "@ginger-society/ginger-book";
+import { msw } from "@ginger-society/ginger-book";
 import { useEffect, useState } from "react";
 
 const FETCH_URL = "/api-url.json";
@@ -78,6 +78,6 @@ import { setupServer } from 'msw/node'
 You can use the GingerBook's version of MSW by using this import instead:
 
 ```js
-import { setupServer } from "@ladle/react/msw-node";
+import { setupServer } from "@ginger-society/ginger-book/msw-node";
 ```
 

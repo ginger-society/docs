@@ -20,10 +20,10 @@ You can use these default viewport widths (px):
 }
 ```
 
-An application might need to optimize for a different set of devices, so you change the defaults through the `.ladle/config.mjs` configuration:
+An application might need to optimize for a different set of devices, so you change the defaults through the `.ginger-book/config.mjs` configuration:
 
-```js title=".ladle/config.mjs"
-/** @type {import('@ladle/react').UserConfig} */
+```js title=".ginger-book/config.mjs"
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
 export default {
   addons: {
     width: {
@@ -44,7 +44,7 @@ export default {
 You can set the global default (above) or per-story via `meta`:
 
 ```ts
-import type { StoryDefault, Story } from "@ladle/react";
+import type { StoryDefault, Story } from "@ginger-society/ginger-book";
 
 export default {
   meta: {
@@ -69,7 +69,7 @@ GingerBook doesn't normally use iframes around your stories but to make this add
 Some story components like modals might use the entire screen and cover GingerBook's navigation. If you want to restrict the story's space, you can activate the iframed version of GingerBook even without specifying a viewport width:
 
 ```js
-import type { Story } from "@ladle/react";
+import type { Story } from "@ginger-society/ginger-book";
 
 export const Modal: Story = () => <FullScreenModal />;
 Modal.meta = { iframed: true };

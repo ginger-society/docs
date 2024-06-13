@@ -5,7 +5,7 @@ title: Background
 
 You can set the background color of the story canvas through a special [control](./controls) with type `background`:
 
-```tsx title=".ladle/components.tsx"
+```tsx title=".ginger-book/components.tsx"
 export const argTypes = {
   background: {
     control: { type: "background" },

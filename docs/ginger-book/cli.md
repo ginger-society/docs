@@ -3,10 +3,10 @@ id: cli
 title: CLI
 ---
 
-`@ladle/react` provides a CLI so you can `serve` (dev) or `build` your application:
+`@ginger-society/ginger-book` provides a CLI so you can `serve` (dev) or `build` your application:
 
 ```bash
-Usage: ladle [options] [command]
+Usage: ginger-book [options] [command]
 
 Options:
   -h, --help           display help for command
@@ -21,7 +21,7 @@ Commands:
 ## Serve command
 
 ```bash
-Usage: ladle serve|dev [options]
+Usage: ginger-book serve|dev [options]
 
 start developing
 
@@ -30,7 +30,7 @@ Options:
   -p, --port [number]    port to serve the application
   --stories [string]     glob to find stories
   --theme [string]       theme light, dark or auto
-  --config [string]      folder where config is located, default .ladle
+  --config [string]      folder where config is located, default .ginger-book
   --viteConfig [string]  file with Vite configuration
   --base [string]        base URL path for build output
   --mode [string]        Vite mode
@@ -42,7 +42,7 @@ Options:
 ## Build command
 
 ```bash
-Usage: ladle build [options]
+Usage: ginger-book build [options]
 
 build static production app
 
@@ -50,7 +50,7 @@ Options:
   -o, --outDir <path>    output directory
   --stories [string]     glob to find stories
   --theme [string]       theme light, dark or auto
-  --config [string]      folder where config is located, default .ladle
+  --config [string]      folder where config is located, default .ginger-book
   --viteConfig [string]  file with Vite configuration
   --base [string]        base URL path for build output
   --mode [string]        Vite mode
@@ -61,7 +61,7 @@ Options:
 ## Preview command
 
 ```bash
-Usage: ladle preview [options]
+Usage: ginger-book preview [options]
 
 start a server to preview the build in outDir
 
@@ -69,7 +69,7 @@ Options:
   -o, --outDir <path>    output directory
   -h, --host [string]    host to serve the application
   -p, --port [number]    port to serve the application
-  --config [string]      folder where config is located, default .ladle
+  --config [string]      folder where config is located, default .ginger-book
   --viteConfig [string]  file with Vite configuration
   --base [string]        base URL path for build output
   --mode [string]        Vite mode
