@@ -11,7 +11,7 @@ The included template is designed to streamline the setup and deployment of Djan
 
 The Ginger DJ Template provides a comprehensive setup including:
 
-- **Dockerized Development Environment:** Using Docker Compose, the project sets up services like Django, Prometheus, and Redis, ensuring consistency across development and production environments.
+- **Dockerized Development Environment:** Using Docker Compose, the project sets up services like GingerDJ, Prometheus, and Redis, ensuring consistency across development and production environments.
 - **VS Code Customizations:** Pre-installed extensions for Python development, including code formatters and linters.
 - **Pre-configured Django Settings:** Basic Django settings including installed apps, middleware, templates, and database configurations.
 

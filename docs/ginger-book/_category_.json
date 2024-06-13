@@ -1,0 +1,8 @@
+{
+  "label": "Ginger Book",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Get started on building your first UI library using ginger book"
+  }
+}
