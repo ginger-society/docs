@@ -10,8 +10,8 @@ You can create / login with an email ID and password. There is no validation on 
 
 You can then enter a password. 
 
-For creating a new account, just click on sign up
-For login into an existing account , click on sign in
+    1. For creating a new account, just click on sign up
+    2. For login into an existing account , click on sign in
 
 ## Dashboard
 
@@ -27,12 +27,12 @@ There are two types of blocks you can place. `Enum` and `Table`.
 
 Right click anywhere and select the approperiate option to add. You can move the block on the canvas for better organization.
 
-1. Enum : Its a list of string enums. Start by giving a name, doc string and then you can provide options , Enter anything and press enter
+1. *Enum* : Its a list of string enums. Start by giving a name, doc string and then you can provide options , Enter anything and press enter
     a. Edit an existing option by clicking on the disaplay name
     b. You can delete an option by clicking on the delete icon
     c. To delete a block, just click on the edit button on the button and then on the top right corner you will have a delete option
 
-2. Table: Similar to enum, you can add a Table block, edit button will open the editor. Start by giving a name and doc string.
+2. *Table*: Similar to enum, you can add a Table block, edit button will open the editor. Start by giving a name and doc string.
 
     a. Once the basic details of the Table is given, you can add a column to this table by clicking on `Add new row` in the card UI.
     b. Click on the newly added row to define the properties of the table Column. 
