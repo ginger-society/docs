@@ -19,7 +19,7 @@ db-compose init
 ```
 This command initializes a new database project. You will be prompted to enter various details such as port, studio port, database name, username, and password.
 
-Bring Up the Database
+Bring Up the Database. Before this you should copy the schema definition from the studio and paste it in `db.design.json`
 
 ```sh
 db-compose up
