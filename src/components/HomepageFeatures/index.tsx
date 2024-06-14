@@ -44,23 +44,23 @@ const FeatureList: FeatureItem[] = [
     docsLink: "/docs/ginger-db",
   },
   {
-    title: "GingerJS",
-    img: "/img/ginger-js.png",
-    description: (
-      <>
-        GingerJS is a full stack framework for writing web applications with
-        Python on the backend and React on the frontend.
-      </>
-    ),
-    comingSoon: true,
-  },
-  {
     title: "GingerUI",
     img: "/img/ginger-ui.png",
     description: (
       <>
         Sleek classy React UI library using Uber's design system. PS, it
         generates react icons component from SVGs.
+      </>
+    ),
+    docsLink: "/docs/ginger-ui",
+  },
+  {
+    title: "GingerJS",
+    img: "/img/ginger-js.png",
+    description: (
+      <>
+        GingerJS is a full stack framework for writing web applications with
+        Python on the backend and React on the frontend.
       </>
     ),
     comingSoon: true,

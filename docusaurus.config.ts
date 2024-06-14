@@ -73,6 +73,12 @@ const config: Config = {
           label: 'GingerDB',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'gingerUISidebar',
+          position: 'left',
+          label: 'GingerUI',
+        },
+        {
           href: 'http://gingersociety.org',
           label: 'Ginger Society Main Website',
           position: 'right', // Positions the link to the right
