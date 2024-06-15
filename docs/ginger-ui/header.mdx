@@ -1,0 +1,56 @@
+---
+sidebar_label: Header
+---
+
+import React from 'react';
+import {Header} from '@ginger-society/ginger-ui';
+
+# Header
+
+The `Header` component is a simple header that displays a logo and a welcome message if a user is logged in. Below you will find detailed information about its props and how to use it.
+
+## Props
+
+| Prop             | Type           | Default | Description                                                    |
+|------------------|----------------|---------|----------------------------------------------------------------|
+| `user`           | `User`         | `null`  | The user object containing the user's name.                    |
+| `onLogin`        | `() => void`   | `null`  | Callback function to handle login action.                      |
+| `onLogout`       | `() => void`   | `null`  | Callback function to handle logout action.                     |
+| `onCreateAccount`| `() => void`   | `null`  | Callback function to handle account creation action.           |
+
+## Example Usage
+
+### Header with Logged-In User
+
+```jsx
+
+<Header
+    user={user}
+    onLogin={() => alert('Login clicked')}
+    onLogout={() => alert('Logout clicked')}
+    onCreateAccount={() => alert('Create Account clicked')}
+/>
+```
+
+<Header
+  user={{ name: 'Jane Doe' }}
+  onLogin={() => alert('Login clicked')}
+  onLogout={() => alert('Logout clicked')}
+  onCreateAccount={() => alert('Create Account clicked')}
+/>
+
+### Header with No User
+
+```jsx
+<Header
+    onLogin={() => alert('Login clicked')}
+    onLogout={() => alert('Logout clicked')}
+    onCreateAccount={() => alert('Create Account clicked')}
+/>
+```
+
+<Header
+  onLogin={() => alert('Login clicked')}
+  onLogout={() => alert('Logout clicked')}
+  onCreateAccount={() => alert('Create Account clicked')}
+/>
