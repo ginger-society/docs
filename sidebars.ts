@@ -78,7 +78,7 @@ const sidebars: SidebarsConfig = {
     label: "Getting Started",
     collapsible: false,
     items: [
-      "ginger-ui/introduction",
+      "ginger-ui/index",
       "ginger-ui/installation",
     ],
   }, {
