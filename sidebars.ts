@@ -80,12 +80,16 @@ const sidebars: SidebarsConfig = {
     items: [
       "ginger-ui/index",
       "ginger-ui/installation",
+      "ginger-ui/icons",
     ],
   }, {
     type: 'category', label: 'Components', collapsible: false,
     items: [
       "ginger-ui/button",
       "ginger-ui/header",
+      "ginger-ui/input",
+      "ginger-ui/dropdown",
+      "ginger-ui/loader",
     ],
   }],
 };

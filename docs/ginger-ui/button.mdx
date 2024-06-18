@@ -1,23 +1,19 @@
----
-sidebar_label: Button
----
-
 import React from 'react';
-import { Button } from '@ginger-society/ginger-ui';
+import { ButtonType, ButtonSize, Button } from '@ginger-society/ginger-ui';
 
 # Button
 
-The <Button label='Button' primary /> component is a versatile UI element that can be used for various interactions within your application. Below you will find detailed information about its props and how to use it.
+The <Button label='Button' type={ButtonType.Primary} /> component is a versatile UI element that can be used for various interactions within your application. Below you will find detailed information about its props and how to use it.
 
 ## Props
 
-| Prop             | Type                              | Default   | Description                                                           |
-|------------------|-----------------------------------|-----------|-----------------------------------------------------------------------|
-| `primary`        | `boolean`                         | `false`   | Determines if the button is the principal call to action on the page. |
-| `backgroundColor`| `string`                          | `null`    | Specifies the background color of the button.                         |
-| `size`           | `'small' \| 'medium' \| 'large'`  | `'medium'`| Specifies the size of the button.                                     |
-| `label`          | `string`                          | Required  | The text to be displayed inside the button.                           |
-| `onClick`        | `() => void`                      | `null`    | Optional click handler function for button click events.              |
+| Prop     | Type                                         | Default                   | Description                                                           |
+|----------|----------------------------------------------|---------------------------|-----------------------------------------------------------------------|
+| `type`   | `ButtonType.Primary \| ButtonType.Secondary \| ButtonType.Tertiary` | `ButtonType.Secondary`    | Determines the button style.                                          |
+| `size`   | `ButtonSize.Small \| ButtonSize.Medium \| ButtonSize.Large`       | `ButtonSize.Medium`       | Specifies the size of the button.                                     |
+| `label`  | `string`                                     | Required                  | The text to be displayed inside the button.                           |
+| `loading`| `boolean`                                    | `false`                   | Displays a loading indicator inside the button when set to true.      |
+| `onClick`| `() => void`                                 | `null`                    | Optional click handler function for button click events.              |
 
 ## Example Usage
 
@@ -25,18 +21,16 @@ The <Button label='Button' primary /> component is a versatile UI element that c
 
 <Button
   label="Primary Button"
-  primary
-  size="large"
-  backgroundColor="#007bff"
+  type={ButtonType.Primary}
+  size={ButtonSize.Large}
   onClick={() => alert('Primary Button Clicked')}
 />
 
 ```jsx
 <Button
   label="Primary Button"
-  primary
-  size="large"
-  backgroundColor="#007bff"
+  type={ButtonType.Primary}
+  size={ButtonSize.Large}
   onClick={() => alert('Primary Button Clicked')}
 />
 ```
@@ -45,34 +39,34 @@ The <Button label='Button' primary /> component is a versatile UI element that c
 
 <Button
   label="Secondary Button"
-  size="medium"
-  backgroundColor="#6c757d"
+  type={ButtonType.Secondary}
+  size={ButtonSize.Medium}
   onClick={() => alert('Secondary Button Clicked')}
 />
 
 ```jsx
 <Button
   label="Secondary Button"
-  size="medium"
-  backgroundColor="#6c757d"
+  type={ButtonType.Secondary}
+  size={ButtonSize.Medium}
   onClick={() => alert('Secondary Button Clicked')}
 />
 ```
 
-### Small Button
+### Tertiary Button
 
 <Button
-  label="Small Button"
-  size="small"
-  backgroundColor="#28a745"
-  onClick={() => alert('Small Button Clicked')}
+  label="Tertiary Button"
+  type={ButtonType.Tertiary}
+  size={ButtonSize.Small}
+  onClick={() => alert('Tertiary Button Clicked')}
 />
 
 ```jsx
 <Button
-  label="Small Button"
-  size="small"
-  backgroundColor="#28a745"
-  onClick={() => alert('Small Button Clicked')}
+  label="Tertiary Button"
+  type={ButtonType.Tertiary}
+  size={ButtonSize.Small}
+  onClick={() => alert('Tertiary Button Clicked')}
 />
 ```

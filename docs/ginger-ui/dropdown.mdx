@@ -1,0 +1,70 @@
+---
+sidebar_label: Dropdown
+---
+
+import React from 'react';
+import {Dropdown} from '@ginger-society/ginger-ui';
+
+# Dropdown
+
+The `Dropdown` component is a versatile dropdown menu that shows or hides its content when the label is clicked. Below you will find detailed information about its props and how to use it.
+
+## Props
+
+| Prop      | Type                      | Default | Description                                             |
+|-----------|---------------------------|---------|---------------------------------------------------------|
+| `children`| `ReactNode`               | Required| The content to display inside the dropdown.             |
+| `label`   | `ReactNode`               | Required| The element that, when clicked, toggles the dropdown.   |
+| `align`   | `'right' \| 'left'`       | `'right'` | The alignment of the dropdown content relative to the label. |
+
+## Example Usage
+
+### Basic Dropdown
+
+```jsx
+<Dropdown
+  label={<button>Open Menu</button>}
+  align="left"
+>
+  <ul>
+    <li>Option 1</li>
+    <li>Option 2</li>
+    <li>Option 3</li>
+  </ul>
+</Dropdown>
+```
+
+<Dropdown
+  label={<button>Open Menu</button>}
+  align="left"
+>
+  <ul>
+    <li>Option 1</li>
+    <li>Option 2</li>
+    <li>Option 3</li>
+  </ul>
+</Dropdown>
+
+### Dropdown with Custom Content
+
+```jsx
+<Dropdown
+  label={<span>Profile</span>}
+  align="right"
+>
+  <div>
+    <p>User: Jane Doe</p>
+    <button onClick={() => alert('Logout clicked')}>Logout</button>
+  </div>
+</Dropdown>
+```
+
+<Dropdown
+  label={<span>Profile</span>}
+  align="right"
+>
+  <div>
+    <p>User: Jane Doe</p>
+    <button onClick={() => alert('Logout clicked')}>Logout</button>
+  </div>
+</Dropdown>

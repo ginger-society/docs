@@ -1,0 +1,106 @@
+---
+sidebar_label: Input
+---
+
+import React from 'react';
+import {Input} from '@ginger-society/ginger-ui';
+
+# Input
+
+The `Input` component is a flexible and customizable input field with support for various states, labels, clearable inputs, and enhancers. Below you will find detailed information about its props and how to use it.
+
+## Props
+
+| Prop            | Type                                 | Default | Description                                                                |
+|-----------------|--------------------------------------|---------|----------------------------------------------------------------------------|
+| `state`         | `'danger' \| 'success' \| 'warning'` | `null`  | Indicates the state of the input field, affecting its border and background.|
+| `label`         | `string`                             | `null`  | A label to display above the input field.                                   |
+| `info`          | `string`                             | `null`  | Additional information or hint text displayed below the input field.        |
+| `clearable`     | `boolean`                            | `false` | If true, displays a clear button to reset the input field.                  |
+| `startEnhancer` | `ReactNode`                          | `null`  | A node to display at the start of the input field.                          |
+| `endEnhancer`   | `ReactNode`                          | `null`  | A node to display at the end of the input field.                            |
+| `type`          | `string`                             | `text`  | The type of the input field, such as `text`, `password`, etc.               |
+| `...props`      | `React.InputHTMLAttributes`          | `null`  | Additional props for the input element.                                     |
+
+## Example Usage
+
+### Basic Input
+
+```jsx
+<Input
+  label="Username"
+  placeholder="Enter your username"
+/>
+```
+
+<Input
+  label="Username"
+  placeholder="Enter your username"
+/>
+
+### Input with Enhancers
+
+```jsx
+<Input
+  label="Search"
+  placeholder="Search..."
+  startEnhancer={<span>🔍</span>}
+/>
+```
+
+<Input
+  label="Search"
+  placeholder="Search..."
+  startEnhancer={<span>🔍</span>}
+/>
+
+### Clearable Input
+
+```jsx
+<Input
+  label="Email"
+  placeholder="Enter your email"
+  clearable
+/>
+```
+
+<Input
+  label="Email"
+  placeholder="Enter your email"
+  clearable
+  value="user@example.com"
+/>
+
+### Password Input
+
+```jsx
+<Input
+  label="Password"
+  type="password"
+  placeholder="Enter your password"
+/>
+```
+
+<Input
+  label="Password"
+  type="password"
+  placeholder="Enter your password"
+/>
+
+### Input with State
+
+```jsx
+<Input
+  label="Username"
+  placeholder="Enter your username"
+  state="danger"
+  info="This username is already taken."
+/>
+```
+
+<Input
+  label="Username"
+  placeholder="Enter your username"
+  state="danger"
+  info="This username is already taken."
+/>

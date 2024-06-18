@@ -3,54 +3,100 @@ sidebar_label: Header
 ---
 
 import React from 'react';
-import {Header} from '@ginger-society/ginger-ui';
+import { Header, Button } from '@ginger-society/ginger-ui';
+
+
 
 # Header
 
-The `Header` component is a simple header that displays a logo and a welcome message if a user is logged in. Below you will find detailed information about its props and how to use it.
+The `Header` component is a versatile header that displays a logo, brand name, and user-related actions. Below you will find detailed information about its props and how to use it.
 
 ## Props
 
-| Prop             | Type           | Default | Description                                                    |
-|------------------|----------------|---------|----------------------------------------------------------------|
-| `user`           | `User`         | `null`  | The user object containing the user's name.                    |
-| `onLogin`        | `() => void`   | `null`  | Callback function to handle login action.                      |
-| `onLogout`       | `() => void`   | `null`  | Callback function to handle logout action.                     |
-| `onCreateAccount`| `() => void`   | `null`  | Callback function to handle account creation action.           |
+| Prop               | Type                | Default | Description                                                    |
+|--------------------|---------------------|---------|----------------------------------------------------------------|
+| `user`             | `User`              | `null`  | The user object containing the user's name and email.          |
+| `icon`             | `ReactNode`         | `null`  | An optional icon to display next to the brand name.            |
+| `anonymousActions` | `ReactNode`         | `null`  | Actions to display when the user is not logged in.             |
+| `sticky`           | `boolean`           | `true`  | Determines if the header should stick to the top of the page.  |
+| `brandName`        | `string`            | Required| The name of the brand to display in the header.                |
+| `onLogout`         | `() => void`        | `null`  | Callback function to handle logout action.                     |
 
 ## Example Usage
 
 ### Header with Logged-In User
 
 ```jsx
-
 <Header
-    user={user}
-    onLogin={() => alert('Login clicked')}
-    onLogout={() => alert('Logout clicked')}
-    onCreateAccount={() => alert('Create Account clicked')}
+  brandName="Ginger Society"
+  user={{ name: 'Jane Doe', email: 'jane.doe@example.com' }}
+  icon={<span >Icon</span>}
+  onLogout={() => alert('Logout clicked')}
 />
 ```
-
 <Header
-  user={{ name: 'Jane Doe' }}
-  onLogin={() => alert('Login clicked')}
+  brandName="Ginger Society"
+  user={{ name: 'Jane Doe', email: 'jane.doe@example.com' }}
+  icon={<svg
+		width="32"
+		height="32"
+		viewBox="0 0 32 32"
+		xmlns="http://www.w3.org/2000/svg"
+	>
+		<g fill="none" fillRule="evenodd">
+			<path
+				d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z"
+				fill="#FFF"
+			/>
+			<path
+				d="M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z"
+				fill="#555AB9"
+			/>
+			<path
+				d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z"
+				fill="#91BAF8"
+			/>
+		</g>
+	</svg>}
   onLogout={() => alert('Logout clicked')}
-  onCreateAccount={() => alert('Create Account clicked')}
 />
-
+<br />
+<br />
+<br />
+<br />
 ### Header with No User
 
 ```jsx
 <Header
-    onLogin={() => alert('Login clicked')}
-    onLogout={() => alert('Logout clicked')}
-    onCreateAccount={() => alert('Create Account clicked')}
+  brandName="Ginger Society"
+  icon={<span >Icon</span>}
+  anonymousActions={<Button label="Login" onClick={() => alert('Login clicked')} />}
 />
 ```
 
 <Header
-  onLogin={() => alert('Login clicked')}
-  onLogout={() => alert('Logout clicked')}
-  onCreateAccount={() => alert('Create Account clicked')}
+  brandName="Ginger Society"
+  icon={<svg
+		width="32"
+		height="32"
+		viewBox="0 0 32 32"
+		xmlns="http://www.w3.org/2000/svg"
+	>
+		<g fill="none" fillRule="evenodd">
+			<path
+				d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z"
+				fill="#FFF"
+			/>
+			<path
+				d="M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z"
+				fill="#555AB9"
+			/>
+			<path
+				d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z"
+				fill="#91BAF8"
+			/>
+		</g>
+	</svg>}
+  anonymousActions={<Button label="Login" onClick={() => alert('Login clicked')} />}
 />
+
