@@ -90,6 +90,7 @@ const sidebars: SidebarsConfig = {
       "ginger-ui/input",
       "ginger-ui/dropdown",
       "ginger-ui/loader",
+      "ginger-ui/modal",
     ],
   }],
 };

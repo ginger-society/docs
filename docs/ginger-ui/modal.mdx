@@ -1,0 +1,59 @@
+# Modal
+
+import ExampleModal from '../../src/components/ModalExample'
+
+The `Modal` component displays a modal dialog box over the content, providing a way to present information or receive input from the user. It includes options to customize its behavior and appearance.
+
+## Props
+
+| Prop                      | Type                       | Default               | Description                                                                                                                |
+|---------------------------|----------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------|
+| `isOpen`                  | `boolean`                  | Required              | Determines whether the modal is open or closed.                                                                              |
+| `onClose`                 | `() => void`               | Required              | Callback function to handle closing the modal.                                                                               |
+| `children`                | `ReactNode`                | Required              | Content to be displayed inside the modal.                                                                                    |
+| `preventCancelOnOverlay`  | `boolean`                  | `false`               | Prevents closing the modal when clicking outside the dialog content.                                                         |
+| `showFooter`              | `boolean`                  | `false`               | Determines whether to show the footer with buttons in the modal.                                                             |
+| `onOk`                    | `() => void`               | -                     | Optional callback function to handle the "Ok" button click event. Only applicable if `showFooter` is `true`.                |
+| `size`                    | `ModalSize`                | `ModalSize.Medium`    | Specifies the size of the modal. Available options are `ModalSize.Medium`, `ModalSize.Small`, `ModalSize.Large`, and `ModalSize.XLarge`. |
+
+## Example Usage
+
+```jsx
+import React, { useState } from 'react';
+import { ModalSize, Modal, ModalHeader, ModalBody } from '@ginger-society/ginger-ui';
+
+const ExampleModal = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsOpen(false);
+  };
+
+  return (
+    <>
+      <button onClick={handleOpenModal}>Open Modal</button>
+      <Modal isOpen={isOpen} onClose={handleCloseModal} size={ModalSize.Large} preventCancelOnOverlay>
+        <ModalHeader>Hello world</ModalHeader>
+        <ModalBody>
+            <p>
+                A Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi cum
+                sint eius voluptas itaque obcaecati, totam ratione earum ullam
+                eligendi officiis ipsum possimus sit quas accusantium voluptatibus
+                natus voluptatum aperiam?
+            </p>
+        </ModalBody>
+      </Modal>
+    </>
+  );
+};
+
+export default ExampleModal;
+```
+
+<ExampleModal />
+
+In the above example, `isOpen` controls the modal's visibility, `onClose` handles modal close events, `size` determines the modal's size.
