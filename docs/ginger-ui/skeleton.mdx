@@ -1,0 +1,47 @@
+---
+sidebar_label: Skeleton
+---
+import SkeletonExample from '../../src/components/SkeletonExample';
+
+# Skeleton
+
+The `Skeleton` component provides a placeholder for content loading. It is used to visually represent the loading state of content before actual data is fetched or rendered.
+
+## Import
+
+To use the `Skeleton` component, import it as follows:
+
+```jsx
+import Skeleton from './Skeleton';
+```
+
+## Props
+
+| Prop         | Type             | Default | Description                                      |
+|--------------|------------------|---------|--------------------------------------------------|
+| `width`      | `string | number` | -       | Width of the skeleton element.                    |
+| `height`     | `string | number` | -       | Height of the skeleton element.                   |
+| `borderRadius`| `string | number` | `'0'`   | Border radius of the skeleton element.            |
+| `className`  | `string`         | `''`    | Additional CSS class name for styling purposes.    |
+
+## Example Usage
+
+```jsx
+import React from 'react';
+import Skeleton from './Skeleton';
+
+const ExampleSkeleton = () => {
+  return (
+    <div>
+      <Skeleton width="100px" height="20px" />
+      <Skeleton width="80%" height="100px" borderRadius="8px" />
+    </div>
+  );
+};
+
+export default ExampleSkeleton;
+```
+## Demo
+<SkeletonExample />
+
+In the above example, `Skeleton` components are used to create placeholders for various content elements. The `width`, `height`, `borderRadius`, and `className` props can be customized to achieve different styles and effects for the skeleton placeholders.

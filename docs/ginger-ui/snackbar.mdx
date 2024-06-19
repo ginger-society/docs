@@ -1,0 +1,59 @@
+---
+sidebar_label: Snackbar
+---
+
+import SnackbarExample from '../../src/components/SnackbarExample';
+
+# Snackbar Component
+
+The `Snackbar` component is used to display brief messages to the user. It supports different durations and can optionally be cancellable with a close button. The component uses a context provider to manage multiple snackbar messages in a queue.
+
+## Usage
+
+
+```jsx
+import React from 'react';
+import { SnackbarProvider, SnackbarTimer, useSnackbar } from '@ginger-society/ginger-ui';
+
+const MyComponent = () => {
+    const { show } = useSnackbar();
+
+    const handleShowSnackbar = (message, duration, cancellable) => {
+        show(<div>{message}</div>, duration, cancellable);
+    };
+
+    return (
+        <div>
+            <button onClick={() => handleShowSnackbar('Short message', SnackbarTimer.Short, false)}>
+                Show short Snackbar
+            </button>
+            <button onClick={() => handleShowSnackbar('Long message', SnackbarTimer.Long, true)}>
+                Show long cancellable Snackbar
+            </button>
+        </div>
+    );
+};
+
+const App = () => {
+    return (
+        <SnackbarProvider>
+            <MyComponent />
+        </SnackbarProvider>
+    );
+};
+
+export default App;
+```
+
+
+The following table explains the argument of the show function
+
+| Argument   | Type            | Description                                                                                                                         |
+|------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| `component` | `ReactNode`     | Represents the content to display inside the Snackbar. It can be a string, JSX element, or a custom React component.               |
+| `duration`  | `SnackbarTimer` | Specifies the duration for which the Snackbar will be visible before automatically closing. Use values from `SnackbarTimer` enum.   |
+| `cancellable` | `boolean`     | Optional argument determining if the Snackbar can be manually closed by the user. `true` displays a close button; `false` auto-dismisses. |
+
+## Demo
+
+<SnackbarExample />

@@ -15,8 +15,8 @@ importers:
         specifier: 3.3.2
         version: 3.3.2(@algolia/client-search@4.23.3)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(search-insights@2.14.0)(typescript@5.2.2)
       '@ginger-society/ginger-ui':
-        specifier: ^0.0.13
-        version: 0.0.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^0.0.15
+        version: 0.0.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@mdx-js/react':
         specifier: ^3.0.0
         version: 3.0.1(@types/react@18.3.3)(react@18.3.1)
@@ -953,8 +953,8 @@ packages:
       '@docusaurus/types':
         optional: true
 
-  '@ginger-society/ginger-ui@0.0.13':
-    resolution: {integrity: sha512-0TQf8BbcsP+NTyaNpH1e/+g8UYH5pTNRvk1Ihz8K9cAb1Vi8keKm3DoUlCgk+9d+iViFhBGXAmbtpieNPBuIbQ==}
+  '@ginger-society/ginger-ui@0.0.15':
+    resolution: {integrity: sha512-aU7TyqVcDe5SvpfiCjhshc8BhGHqVCSSW/dkpk0k5RBOjSZeCVeZ78y9EuDDmBYOMMYtxHfm9iCPmTVUF9W0EA==}
     engines: {node: '>=16'}
     hasBin: true
     peerDependencies:
@@ -6361,7 +6361,7 @@ snapshots:
       - uglify-js
       - webpack-cli
 
-  '@ginger-society/ginger-ui@0.0.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@ginger-society/ginger-ui@0.0.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)

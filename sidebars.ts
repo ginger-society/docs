@@ -91,6 +91,8 @@ const sidebars: SidebarsConfig = {
       "ginger-ui/dropdown",
       "ginger-ui/loader",
       "ginger-ui/modal",
+      "ginger-ui/skeleton",
+      "ginger-ui/snackbar",
     ],
   }],
 };
