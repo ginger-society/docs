@@ -1,0 +1,65 @@
+Sure! Here's the documentation for the `Text` component:
+
+---
+sidebar_label: Text
+---
+
+import TextExample from '../../src/components/TypographyExample';
+
+# Text
+
+The `Text` component is a flexible and customizable component for displaying text with various sizes, colors, weights, and styles. Below you will find detailed information about its props and how to use it.
+
+## Props
+
+| Prop       | Type                           | Default      | Description                                                             |
+|------------|--------------------------------|--------------|-------------------------------------------------------------------------|
+| `tag`      | `keyof JSX.IntrinsicElements`  | `'span'`     | The HTML tag to be used for the text element.                           |
+| `size`     | `TextSize`                     | `TextSize.Normal` | The size of the text, one of `xlarge`, `large`, `normal`, or `small`.    |
+| `color`    | `TextColor`                    | `TextColor.Primary` | The color of the text, one of `primary`, `danger`, `success`, `warning`, `info`, or `muted`. |
+| `children` | `React.ReactNode`              | Required     | The content to be displayed inside the text element.                    |
+| `underline`| `boolean`                      | `false`      | If true, the text will be underlined.                                   |
+| `italics`  | `boolean`                      | `false`      | If true, the text will be italicized.                                   |
+| `weight`   | `TextWeight`                   | `TextWeight.Normal` | The weight of the text, either `normal` or `bold`.                       |
+
+## Example Usage
+
+### Basic Text
+
+```jsx
+import React from 'react';
+import { TextSize, TextColor, TextWeight, Text } from '@ginger-society/ginger-ui';
+
+export const TextExample: React.FC = () => {
+	return (
+		<div>
+			<Text>Default Text</Text>
+			<Text size={TextSize.XLarge} color={TextColor.Danger} weight={TextWeight.Bold}>
+				Extra Large Bold Danger Text
+			</Text>
+			<Text size={TextSize.Large} color={TextColor.Success} underline>
+				Large Underlined Success Text
+			</Text>
+			<Text size={TextSize.Normal} color={TextColor.Warning} italics>
+				Normal Italicized Warning Text
+			</Text>
+			<Text size={TextSize.Small} color={TextColor.Info}>
+				Small Info Text
+			</Text>
+			<Text size={TextSize.Small} color={TextColor.Muted}>
+				Small Muted Text
+			</Text>
+		</div>
+	);
+}
+```
+
+
+In these examples, the `Text` component is used to display text with different sizes, colors, weights, and styles. The `tag` prop allows for customizing the HTML tag used for the text element, providing flexibility for various use cases.
+
+## Demo
+
+### Basic Text Example
+
+<TextExample />
+

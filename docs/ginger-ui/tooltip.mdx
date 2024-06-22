@@ -1,0 +1,57 @@
+Sure! Here's the documentation for the `Tooltip` component:
+
+---
+sidebar_label: Tooltip
+---
+
+import TooltipExample from '../../src/components/TooltipExample'
+
+
+# Tooltip
+
+The `Tooltip` component provides a simple way to display additional information when a user hovers over or focuses on an element. Below you will find detailed information about its props and how to use it.
+
+## Props
+
+| Prop       | Type               | Default | Description                                                                  |
+|------------|--------------------|---------|------------------------------------------------------------------------------|
+| `label`    | `React.ReactNode`  | Required| The element that triggers the tooltip when hovered over or focused on.       |
+| `children` | `React.ReactNode`  | Required| The content to display inside the tooltip.                                   |
+| `position` | `'top' \| 'right' \| 'bottom' \| 'left'` | `'top'` | The position of the tooltip relative to the label.                           |
+
+## Example Usage
+
+### Basic Tooltip
+
+```jsx
+import React from 'react'
+import Tooltip from './Tooltip'
+
+export const TooltipExample: React.FC = () => {
+	return (
+		<div style={{ display: 'flex', gap: '20px', justifyContent: 'center', marginTop: '50px' }}>
+			<Tooltip label={<button>Hover me (Top)</button>} position="top">
+				Tooltip content at the top
+			</Tooltip>
+
+			<Tooltip label={<button>Hover me (Right)</button>} position="right">
+				Tooltip content at the right
+			</Tooltip>
+
+			<Tooltip label={<button>Hover me (Bottom)</button>} position="bottom">
+				Tooltip content at the bottom
+			</Tooltip>
+
+			<Tooltip label={<button>Hover me (Left)</button>} position="left">
+				Tooltip content at the left
+			</Tooltip>
+		</div>
+	)
+}
+```
+
+In this example, the `Tooltip` component is used to display tooltips in different positions (top, right, bottom, and left) when hovering over the buttons. The `label` prop contains the element that triggers the tooltip, and the `children` prop contains the content to be displayed inside the tooltip.
+
+## Demo
+
+<TooltipExample />

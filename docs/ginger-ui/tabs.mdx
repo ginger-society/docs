@@ -1,0 +1,53 @@
+---
+sidebar_label: Tabs
+---
+
+import TabsExample from '../../src/components/TabsExample'
+
+# Tabs
+
+The `Tabs` component provides a tabbed interface to display different content sections. Each `Tab` contains a heading and content. Below you will find detailed information about its props and how to use it.
+
+## Props
+
+### Tab
+
+| Prop        | Type              | Default | Description                                               |
+|-------------|-------------------|---------|-----------------------------------------------------------|
+| `heading`   | `JSX.Element`     | Required| The element to display as the tab heading.                 |
+| `children`  | `React.ReactNode` | Required| The content to display within the tab.                     |
+| `disabled`  | `boolean`         | `false` | If true, the tab will be disabled and unclickable.         |
+| `active`    | `boolean`         | `false` | If true, the tab will be active initially.                 |
+
+### Tabs
+
+| Prop        | Type                | Default | Description                                               |
+|-------------|---------------------|---------|-----------------------------------------------------------|
+| `children`  | `React.ReactElement<TabProps>[]` | Required | An array of `Tab` elements to display in the tabbed interface. |
+
+## Example Usage
+
+### Basic Tabs
+
+```jsx
+import React from 'react';
+import { Tab, Tabs } from '@ginger-society/ginger-ui';
+
+export const TabsExample: React.FC = () => {
+	return (
+		<Tabs>
+			<Tab heading={<span>Tab 1</span>}>
+				<div>Content for Tab 1</div>
+			</Tab>
+			<Tab heading={<span>Tab 2</span>} active>
+				<div>Content for Tab 2</div>
+			</Tab>
+			<Tab heading={<span>Tab 3</span>} disabled>
+				<div>Content for Tab 3</div>
+			</Tab>
+		</Tabs>
+	);
+};
+```
+
+<TabsExample />

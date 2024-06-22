@@ -1,0 +1,86 @@
+---
+sidebar_label: SideMenu
+---
+
+import SideMenuExample from '../../src/components/SideMenuExample'
+
+# SideMenu
+
+The `SideMenu` component provides a navigational sidebar menu with expandable and collapsible items. It supports nested menu items and highlights the active item.
+
+## Example Usage
+
+### SideMenu with Nested Items
+
+
+<SideMenuExample />
+
+## Props
+
+### SideMenu
+
+| Prop     | Type                      | Description                                                      |
+|----------|---------------------------|------------------------------------------------------------------|
+| `options`| `MenuItem[]`              | Array of menu items to display.                                  |
+| `active` | `string`                  | ID of the currently active menu item.                            |
+| `onChange` | `(newId: string) => void` | Callback function triggered when the active menu item changes.  |
+
+### MenuItem
+
+| Prop       | Type                  | Description                                                |
+|------------|-----------------------|------------------------------------------------------------|
+| `id`       | `string`              | Unique identifier for the menu item.                       |
+| `label`    | `ReactNode`           | Display label for the menu item.                           |
+| `children` | `MenuItem[]`          | Optional nested menu items.                                |
+
+## Example
+
+### SideMenu with Example
+
+```jsx
+import { Test } from '@src/icons';
+import { useState } from 'react';
+import SideMenu from './SideMenu';
+
+const sideMenuOptions = [
+  { id: 'home', label: <span>Home</span> },
+  {
+    id: 'accounts',
+    label: (
+      <span>
+        <Test fill="white" stroke="white" /> Accounts
+      </span>
+    ),
+  },
+  {
+    id: 'finance',
+    label: <span>Finance</span>,
+    children: [
+      { id: 'finance.accountsPayable', label: <span>Accounts Payable</span> },
+      {
+        id: 'finance.accountsReceivables',
+        label: <span>Accounts Receivables</span>,
+      },
+    ],
+  },
+];
+
+export const SideMenuExample: React.FC = () => {
+  const [activeItem, setActiveItem] = useState('home');
+
+  const handleMenuChange = (newId: string) => {
+    setActiveItem(newId);
+  };
+
+  return (
+    <div>
+      <SideMenu
+        options={sideMenuOptions}
+        active={activeItem}
+        onChange={handleMenuChange}
+      />
+      {/* Other content based on the selected menu item */}
+    </div>
+  );
+};
+```

@@ -1,0 +1,105 @@
+---
+sidebar_label: Table
+---
+
+import TableExample from '../../src/components/TableExample'
+
+# Table
+
+The `Table` component is a flexible and customizable table with support for pagination and various content configurations. Below you will find detailed information about its props and how to use it.
+
+## Example Usage
+
+### Basic Table with Pagination
+
+```jsx
+import { useState } from "react";
+import { Pagination, Table } from "@ginger-society/ginger-ui";
+
+export const TableExample: React.FC = () => {
+  const [state, setState] = useState<{ offset: number; limit: number }>({
+    offset: 19,
+    limit: 10,
+  });
+
+  const handleOnChange = (limit: number, offset: number) => {
+    setState({ offset, limit });
+  };
+
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
+      <Table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+          </tr>
+          <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+          </tr>
+          <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+          </tr>
+          <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
+            <td>Canada</td>
+          </tr>
+          <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+          </tr>
+          <tr>
+            <td>North/South</td>
+            <td>Simon Crowther</td>
+            <td>UK</td>
+          </tr>
+          <tr>
+            <td>Paris spécialités</td>
+            <td>Marie Bertrand</td>
+            <td>France</td>
+          </tr>
+          <tr>
+            <td>Eastern Connection</td>
+            <td>Ann Devon</td>
+            <td>Australia</td>
+          </tr>
+          <tr>
+            <td>Rattlesnake Canyon Grocery</td>
+            <td>Paula Wilson</td>
+            <td>USA</td>
+          </tr>
+        </tbody>
+      </Table>
+      <Pagination
+        totalRows={1100}
+        initialRowsPerPage={state.limit}
+        initialOffset={state.offset}
+        onChange={handleOnChange}
+      />
+    </div>
+  );
+};
+
+```
+
+<TableExample />
+

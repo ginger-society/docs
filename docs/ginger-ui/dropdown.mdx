@@ -15,7 +15,8 @@ The `Dropdown` component is a versatile dropdown menu that shows or hides its co
 |-----------|---------------------------|---------|---------------------------------------------------------|
 | `children`| `ReactNode`               | Required| The content to display inside the dropdown.             |
 | `label`   | `ReactNode`               | Required| The element that, when clicked, toggles the dropdown.   |
-| `align`   | `'right' \| 'left'`       | `'right'` | The alignment of the dropdown content relative to the label. |
+| `align`   | `'right' \| 'left' \| 'top'` | `'right'` | The alignment of the dropdown content relative to the label. |
+| `width`   | `string`                  | `'300px'` | The minimum width of the dropdown content.              |
 
 ## Example Usage
 
@@ -57,10 +58,10 @@ The `Dropdown` component is a versatile dropdown menu that shows or hides its co
     <button onClick={() => alert('Logout clicked')}>Logout</button>
   </div>
 </Dropdown>
-
 ```
 
 ## Demo
+
 <Dropdown
   label={<span>Profile</span>}
   align="right"

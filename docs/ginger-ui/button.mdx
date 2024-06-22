@@ -1,19 +1,28 @@
+---
+sidebar_label: Button
+---
+
+
 import React from 'react';
 import { ButtonType, ButtonSize, Button } from '@ginger-society/ginger-ui';
 
 # Button
 
-The <Button label='Button' type={ButtonType.Primary} /> component is a versatile UI element that can be used for various interactions within your application. Below you will find detailed information about its props and how to use it.
+The `<Button/>` component is a versatile UI element that can be used for various interactions within your application. Below you will find detailed information about its props and how to use it.
 
 ## Props
 
-| Prop     | Type                                         | Default                   | Description                                                           |
-|----------|----------------------------------------------|---------------------------|-----------------------------------------------------------------------|
-| `type`   | `ButtonType.Primary \| ButtonType.Secondary \| ButtonType.Tertiary` | `ButtonType.Secondary`    | Determines the button style.                                          |
-| `size`   | `ButtonSize.Small \| ButtonSize.Medium \| ButtonSize.Large`       | `ButtonSize.Medium`       | Specifies the size of the button.                                     |
-| `label`  | `string`                                     | Required                  | The text to be displayed inside the button.                           |
-| `loading`| `boolean`                                    | `false`                   | Displays a loading indicator inside the button when set to true.      |
-| `onClick`| `() => void`                                 | `null`                    | Optional click handler function for button click events.              |
+| Prop          | Type                                         | Default                   | Description                                                           |
+|---------------|----------------------------------------------|---------------------------|-----------------------------------------------------------------------|
+| `type`        | `ButtonType.Primary \| ButtonType.Secondary \| ButtonType.Tertiary` | `ButtonType.Secondary`    | Determines the button style.                                          |
+| `size`        | `ButtonSize.Small \| ButtonSize.Medium \| ButtonSize.Large`       | `ButtonSize.Medium`       | Specifies the size of the button.                                     |
+| `label`       | `string`                                     | Required                  | The text to be displayed inside the button.                           |
+| `loading`     | `boolean`                                    | `false`                   | Displays a loading indicator inside the button when set to true.      |
+| `onClick`     | `() => void`                                 | `null`                    | Optional click handler function for button click events.              |
+| `fullWidth`   | `boolean`                                    | `false`                   | When true, the button will take the full width of its container.      |
+| `startEnhancer` | `React.ReactNode`                          | `null`                    | Optional element to be placed at the start of the button.             |
+| `endEnhancer` | `React.ReactNode`                            | `null`                    | Optional element to be placed at the end of the button.               |
+| `disabled`    | `boolean`                                    | `false`                   | Disables the button when set to true.                                 |
 
 ## Example Usage
 

@@ -1,0 +1,39 @@
+---
+sidebar_label: TextArea
+---
+
+import React from 'react';
+import {TextArea} from '@ginger-society/ginger-ui';
+
+# TextArea
+
+The `TextArea` component is a flexible and customizable multi-line text input field with support for various states, labels, and additional information text. Below you will find detailed information about its props and how to use it.
+
+## Props
+
+| Prop       | Type                                   | Default | Description                                                                  |
+|------------|----------------------------------------|---------|------------------------------------------------------------------------------|
+| `state`    | `'danger' \| 'success' \| 'warning'`   | `null`  | Indicates the state of the text area, affecting its border and background.   |
+| `label`    | `string`                               | `null`  | A label to display above the text area.                                      |
+| `info`     | `string`                               | `null`  | Additional information or hint text displayed below the text area.           |
+| `...props` | `React.TextareaHTMLAttributes`         | `null`  | Additional props for the text area element.                                  |
+
+## Example Usage
+
+### Basic TextArea
+
+```jsx
+import React from 'react';
+import TextArea from './TextArea';
+
+export const TextAreaExample: React.FC = () => {
+	return (
+		<div>
+			<TextArea label="Description" placeholder="Enter your description here" />
+		</div>
+	);
+}
+```
+
+<TextArea label="Description" placeholder="Enter your description here" />
+

@@ -1,0 +1,48 @@
+---
+sidebar_label: Tags
+---
+
+import TagsExample from '../../src/components/TagsExample'
+
+# Tags
+
+The `Tags` component is a collection of `Tag` components, allowing for the display and removal of multiple tags. Below you will find detailed information about its props and how to use it.
+
+## Props
+
+| Prop       | Type                   | Default | Description                                                    |
+|------------|------------------------|---------|----------------------------------------------------------------|
+| `value`    | `Option[]`             | Required| An array of `Option` objects representing the tags to display. |
+| `onChange` | `(value: Option[]) => void` | Required| Function to call when a tag is removed, passing the updated array of tags. |
+
+## Option Type
+
+| Property | Type     | Description                         |
+|----------|----------|-------------------------------------|
+| `value`  | `string` | The unique value of the tag.        |
+| `label`  | `string` | The text to display inside the tag. |
+
+## Example Usage
+
+### Basic Tags
+
+```jsx
+import React, { useState } from 'react';
+import { TagsOption, Tags } from '@ginger-society/ginger-ui';
+
+export const TagsExample: React.FC = () => {
+	const [tags, setTags] = useState<Option[]>([
+		{ value: '1', label: 'Tag 1' },
+		{ value: '2', label: 'Tag 2' },
+		{ value: '3', label: 'Tag 3' },
+	]);
+
+	return (
+		<div>
+			<Tags value={tags} onChange={setTags} />
+		</div>
+	);
+};
+```
+
+<TagsExample />

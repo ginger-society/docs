@@ -1,0 +1,63 @@
+Certainly! Here's the updated documentation with a demo for the `AccordionExample` component:
+
+---
+sidebar_label: Accordion
+---
+
+import AccordionExample from '../../src/components/AccordionExample'
+
+
+# Accordion
+
+The `Accordion` component allows you to create collapsible sections of content that can be expanded or collapsed by clicking on their headers. Below is an example of how to use the `Accordion` component along with the `Section` component.
+
+## Example Usage
+
+### Basic Accordion
+
+```jsx
+import { Text, Accordion, Section} from '@ginger-society/ginger-ui'
+export const AccordionExample: React.FC = () => {
+  return (
+    <Accordion>
+      <Section head={<Text>Disabled Section example</Text>} disabled>
+        <Text tag="h1">Something to read</Text>
+        <Text>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
+          eos aspernatur unde tempora ducimus ut omnis placeat accusamus quas
+          voluptates necessitatibus incidunt optio vel distinctio aperiam,
+          facere enim maiores libero!
+        </Text>
+      </Section>
+
+      <Section head={<Text>This will be open by default</Text>} open>
+        <Text tag="h1">Something to read 2</Text>
+        <Text>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
+          eos aspernatur unde tempora ducimus ut omnis placeat accusamus quas
+          voluptates necessitatibus incidunt optio vel distinctio aperiam,
+          facere enim maiores libero! - 2
+        </Text>
+      </Section>
+
+      <Section head={<Text>Heading 3</Text>}>
+        <Text tag="h1">Something to read 3</Text>
+        <Text>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
+          eos aspernatur unde tempora ducimus ut omnis placeat accusamus quas
+          voluptates necessitatibus incidunt optio vel distinctio aperiam,
+          facere enim maiores libero! - 3
+        </Text>
+      </Section>
+    </Accordion>
+  );
+};
+```
+
+In this example, the `Accordion` component is used to wrap multiple `Section` components, each representing a collapsible section of content. The `head` prop of each `Section` component contains the header content that can be clicked to expand or collapse the section. The `disabled` prop can be used to disable interaction with a specific section.
+
+You can customize the content of each `Section` as needed, including using different tags for headings and paragraphs within the sections.
+
+## Demo
+
+<AccordionExample />
