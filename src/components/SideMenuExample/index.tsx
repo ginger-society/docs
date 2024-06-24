@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { SideMenu } from "@ginger-society/ginger-ui";
 
 const sideMenuOptions = [

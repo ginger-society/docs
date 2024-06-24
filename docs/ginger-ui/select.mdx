@@ -1,0 +1,228 @@
+---
+sidebar_label: Select
+---
+
+import {ExampleMultiSelectLessOptions, ExampleMultiSelect, Example} from '../../src/components/SelectExample'
+
+# Select
+
+The `Select` component provides a dropdown select box with customizable options. It allows for optional rendering of each option using a custom renderer function.
+
+## Example Usage
+
+### Basic Select
+
+```jsx
+export const Example: React.FC = () => {
+  const [selected, setSelected] = useState<Option | null>(null);
+
+  const handleChange = (value: Option) => {
+    console.log("Selected value:", value);
+    setSelected(value);
+  };
+
+  return (
+    <Select
+      label="Simple select"
+      value={selected}
+      options={options}
+      onChange={handleChange}
+    />
+  );
+};
+```
+
+<Example />
+
+### Select with Custom Renderer
+
+```jsx
+import SvgIcons8Bookmark from '@src/icons/Icons8Bookmark';
+import React, { useState } from 'react';
+import Select from './Select';
+import { Option } from './types';
+
+const options: Option[] = [
+  { label: 'United States', value: 'US' },
+  { label: 'Canada', value: 'CA' },
+  { label: 'Mexico', value: 'MX' },
+  { label: 'United Kingdom', value: 'GB' },
+  { label: 'Germany', value: 'DE' },
+  { label: 'France', value: 'FR' },
+  { label: 'Italy', value: 'IT' },
+  { label: 'Spain', value: 'ES' },
+  { label: 'Australia', value: 'AU' },
+  { label: 'New Zealand', value: 'NZ' },
+  { label: 'Japan', value: 'JP' },
+  { label: 'China', value: 'CN' },
+  { label: 'India', value: 'IN' },
+  { label: 'Brazil', value: 'BR' },
+  { label: 'Argentina', value: 'AR' },
+  { label: 'South Africa', value: 'ZA' },
+  { label: 'Russia', value: 'RU' },
+  { label: 'South Korea', value: 'KR' },
+  { label: 'Indonesia', value: 'ID' },
+  { label: 'Turkey', value: 'TR' },
+];
+
+export const ExampleWithRenderer: React.FC = () => {
+  const [selected, setSelected] = useState<Option | null>(null);
+
+  const handleChange = (value: Option) => {
+    console.log('Selected value:', value);
+    setSelected(value);
+  };
+
+  return (
+    <Select
+      label="A select field"
+      value={selected}
+      options={options}
+      renderer={(option) => (
+        <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+          <SvgIcons8Bookmark /> {option.label}
+        </div>
+      )}
+      onChange={handleChange}
+    />
+  );
+};
+```
+
+## Props
+
+### Select
+
+| Prop       | Type                             | Description                                                        |
+|------------|----------------------------------|--------------------------------------------------------------------|
+| `options`  | `Option[]`                       | Array of options to display in the dropdown.                       |
+| `renderer` | `(option: Option) => ReactNode`  | Optional function to render custom content for each option.        |
+| `onChange` | `(value: Option) => void`        | Callback function triggered when an option is selected.            |
+| `value`    | `Option \| null \| undefined`    | The currently selected option.                                     |
+| `label`    | `string`                         | Optional label for the select field.                               |
+
+### Option
+
+| Prop   | Type     | Description                    |
+|--------|----------|--------------------------------|
+| `label`| `string` | Display label for the option.  |
+| `value`| `string` | Unique value for the option.   |
+
+---
+
+# MultiSelect
+
+The `MultiSelect` component allows for selecting multiple options from a dropdown. It includes a search functionality and customizable rendering for each option.
+
+## Example Usage
+
+### Basic MultiSelect
+
+```jsx
+const options: Option[] = [
+  { label: "United States", value: "US" },
+  { label: "Canada", value: "CA" },
+  { label: "Mexico", value: "MX" },
+  { label: "United Kingdom", value: "GB" },
+  { label: "Germany", value: "DE" },
+  { label: "France", value: "FR" },
+  { label: "Italy", value: "IT" },
+  { label: "Spain", value: "ES" },
+  { label: "Australia", value: "AU" },
+  { label: "New Zealand", value: "NZ" },
+  { label: "Japan", value: "JP" },
+  { label: "China", value: "CN" },
+  { label: "India", value: "IN" },
+  { label: "Brazil", value: "BR" },
+  { label: "Argentina", value: "AR" },
+  { label: "South Africa", value: "ZA" },
+  { label: "Russia", value: "RU" },
+  { label: "South Korea", value: "KR" },
+  { label: "Indonesia", value: "ID" },
+  { label: "Turkey", value: "TR" },
+];
+
+export const ExampleMultiSelect: React.FC = () => {
+  const [selectedOptions, setSelectedOptions] = useState<Option[]>([]);
+
+  const handleChange = (value: Option[]) => {
+    setSelectedOptions(value);
+  };
+
+  return (
+    <div>
+      <MultiSelect
+        label={"Select multiple Options"}
+        options={options}
+        onChange={handleChange}
+        value={selectedOptions}
+      />
+    </div>
+  );
+};
+```
+
+<ExampleMultiSelect />
+
+### MultiSelect with Custom Renderer
+
+```jsx
+import React, { useState } from "react";
+import { Icons8Bookmark, MultiSelect, Option } from "@ginger-society/ginger-ui";
+
+const fruits: Option[] = [
+  { label: "Apple", value: "apple" },
+  { label: "Banana", value: "banana" },
+  { label: "Cherry", value: "cherry" },
+  { label: "Date", value: "date" },
+  { label: "Elderberry", value: "elderberry" },
+  { label: "Fig", value: "fig" },
+  { label: "Grape", value: "grape" },
+];
+
+export const ExampleMultiSelectLessOptions: React.FC = () => {
+  const [selectedOptions, setSelectedOptions] = useState<Option[]>([]);
+
+  const handleChange = (value: Option[]) => {
+    setSelectedOptions(value);
+  };
+
+  return (
+    <div>
+      <MultiSelect
+        label="Select from a Small list"
+        options={fruits}
+        onChange={handleChange}
+        value={selectedOptions}
+        renderer={(option) => (
+          <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+            <Icons8Bookmark /> {option.label}
+          </div>
+        )}
+      />
+    </div>
+  );
+};
+
+```
+
+<ExampleMultiSelectLessOptions />
+
+## Props
+
+### MultiSelect
+
+| Prop       | Type                             | Description                                                        |
+|------------|----------------------------------|--------------------------------------------------------------------|
+| `options`  | `Option[]`                       | Array of options to display in the dropdown.                       |
+| `renderer` | `(option: Option) => ReactNode`  | Optional function to render custom content for each option.        |
+| `onChange` | `(value: Option[]) => void`      | Callback function triggered when options are selected.             |
+| `value`    | `Option[]`                       | The currently selected options.                                    |
+| `label`    | `string`                         | Optional label for the multi-select field.                         |
+
+### Option
+
+| Prop   | Type     | Description                    |
+|--------|----------|--------------------------------|
+| `label`| `string` | Display label for the option.  |
+| `value`| `string` | Unique value for the option.   |

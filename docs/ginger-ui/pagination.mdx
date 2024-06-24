@@ -1,0 +1,79 @@
+---
+sidebar_label: Pagination
+---
+
+import { Pagination } from '@ginger-society/ginger-ui';
+
+# Pagination
+
+The `Pagination` component provides a way to navigate through a dataset by dividing it into pages and allowing the user to select the number of rows per page.
+
+## Example Usage
+
+```jsx
+import React, { useState } from 'react';
+import { Pagination, Table } from '@ginger-society/ginger-ui';
+
+export const Example = () => {
+  const [state, setState] = useState<{ offset: number; limit: number }>({
+    offset: 19,
+    limit: 10
+  });
+
+  const handleOnChange = (limit: number, offset: number) => {
+    setState({ offset, limit });
+  };
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
+      <Table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+          </tr>
+        </tbody>
+      </Table>
+      <Pagination
+        totalRows={1100}
+        initialRowsPerPage={state.limit}
+        initialOffset={state.offset}
+        onChange={handleOnChange}
+      />
+    </div>
+  );
+};
+```
+## Demo 
+
+<Pagination
+    totalRows={1100}
+    initialRowsPerPage={10}
+    initialOffset={0}
+    onChange={() => {console.log('handlePageChange')}}
+/>
+
+
+## Props
+
+### Pagination
+
+| Prop                  | Type                     | Description                                                                           |
+|-----------------------|--------------------------|---------------------------------------------------------------------------------------|
+| `totalRows`           | `number`                 | Total number of rows in the dataset.                                                  |
+| `initialRowsPerPage`  | `number`                 | Optional. Initial number of rows per page. Defaults to `10`.                          |
+| `initialOffset`       | `number`                 | Optional. Initial offset for pagination. Defaults to `0`.                             |
+| `onChange`            | `(limit: number, offset: number) => void` | Callback function that is called when the pagination changes. Receives `limit` and `offset` as arguments. |

@@ -1,0 +1,94 @@
+---
+sidebar_label: FileField
+---
+
+import { FileField } from '@ginger-society/ginger-ui';
+
+# FileField
+
+The `FileField` component allows users to upload files by clicking to select or dragging and dropping the file into the designated area. It includes validation for file extensions.
+
+## Example Usage
+
+```jsx
+import React, { useState } from 'react';
+import { FileField } from '@ginger-society/ginger-ui';
+
+export const Example = () => {
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+
+  const handleFileChange = (file: File | null) => {
+    setSelectedFile(file);
+  };
+
+  return (
+    <div>
+      <FileField
+        label="Driving License"
+        onChange={handleFileChange}
+        extensions={['jpg', 'png']}
+      />
+    </div>
+  );
+};
+```
+
+<FileField
+        label="Driving License"
+        onChange={() => {}}
+        extensions={['jpg', 'png']}
+      />
+
+## Props
+
+### FileField
+
+| Prop         | Type                           | Description                                                                 |
+|--------------|--------------------------------|-----------------------------------------------------------------------------|
+| `label`      | `string`                       | Label for the file input.                                                   |
+| `onChange`   | `(file: File | null) => void`  | Callback function that is called when the file changes.                     |
+| `extensions` | `string[]`                     | Optional. Array of allowed file extensions (e.g., `['jpg', 'png']`).        |
+
+## Example Usage
+
+### Basic FileField
+
+```jsx
+import React, { useState } from 'react';
+import { FileField } from '@ginger-society/ginger-ui';
+
+const Example: React.FC = () => {
+  const handleFileChange = (file: File | null) => {
+    console.log('Selected file:', file);
+  };
+
+  return (
+    <FileField label="Upload your file" onChange={handleFileChange} />
+  );
+};
+
+export default Example;
+```
+
+### FileField with Extensions
+
+```jsx
+import React, { useState } from 'react';
+import { FileField } from '@ginger-society/ginger-ui';
+
+const ExampleWithExtensions: React.FC = () => {
+  const handleFileChange = (file: File | null) => {
+    console.log('Selected file:', file);
+  };
+
+  return (
+    <FileField
+      label="Upload your image"
+      onChange={handleFileChange}
+      extensions={['jpg', 'png', 'gif']}
+    />
+  );
+};
+
+export default ExampleWithExtensions;
+```

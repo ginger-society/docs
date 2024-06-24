@@ -1,0 +1,79 @@
+---
+sidebar_label: AsideWindow
+---
+
+import {AsideExample} from '../../src/components/AsideExample'
+
+# AsideWindow
+
+The `AsideWindow` component is a modal-like side panel that slides in from the side of the screen, typically used for additional content or actions without navigating away from the main content.
+
+## Example Usage
+
+```jsx
+import React, { useState } from 'react';
+import { Text, TextSize } from '@ginger-society/ginger-ui/typography';
+import { AsideWindow } from '@ginger-society/ginger-ui';
+
+export const AsideExample = () => {
+  const [isSliderOpen, setIsSliderOpen] = useState(false);
+
+  return (
+    <>
+      <button onClick={() => setIsSliderOpen(true)}>Open Aside</button>
+      <AsideWindow isOpen={isSliderOpen} onClose={() => setIsSliderOpen(false)}>
+        <Text tag="h1" size={TextSize.Large}>
+          Example heading
+        </Text>
+        <Text>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex id odit
+          explicabo delectus in quae quisquam eveniet tempora dolor quia,
+          repellat a illum maxime nobis laborum vel alias ipsam. Unde?
+        </Text>
+      </AsideWindow>
+    </>
+  );
+}
+```
+
+<AsideExample />
+
+## Props
+
+### AsideWindow
+
+| Prop      | Type                  | Description                                  |
+|-----------|-----------------------|----------------------------------------------|
+| `isOpen`  | `boolean`             | Required. Controls whether the aside is open. |
+| `onClose` | `() => void`          | Required. Function to call when the aside should close. |
+| `children`| `React.ReactNode`     | Required. Content to be displayed inside the aside. |
+
+## Example Usage
+
+### Basic AsideWindow
+
+```jsx
+import React, { useState } from 'react';
+import { Text, TextSize } from '@ginger-society/ginger-ui/typography';
+import { AsideWindow } from '@ginger-society/ginger-ui';
+
+const BasicAsideWindow: React.FC = () => {
+  const [isSliderOpen, setIsSliderOpen] = useState(false);
+
+  return (
+    <>
+      <button onClick={() => setIsSliderOpen(true)}>Open Aside</button>
+      <AsideWindow isOpen={isSliderOpen} onClose={() => setIsSliderOpen(false)}>
+        <Text tag="h1" size={TextSize.Large}>
+          Basic Example
+        </Text>
+        <Text>
+          This is a basic example of an aside window with some text content.
+        </Text>
+      </AsideWindow>
+    </>
+  );
+};
+
+export default BasicAsideWindow;
+```

@@ -1,0 +1,65 @@
+---
+sidebar_label: ProgressBar
+---
+import {ProgressBar} from '@ginger-society/ginger-ui';
+
+
+# ProgressBar
+
+The `ProgressBar` component provides a visual representation of progress through a bar. It displays the progress value as a percentage.
+
+## Example Usage
+
+```jsx
+import React from 'react';
+import {ProgressBar} from '@ginger-society/ginger-ui';
+
+export const ProgressBarExample: React.FC = () => (
+  <div>
+    <ProgressBar value={34} height="1rem" />
+  </div>
+);
+```
+<ProgressBar value={34} height="1rem" />
+
+## Props
+
+### ProgressBar
+
+| Prop     | Type      | Description                                                                                   |
+|----------|-----------|-----------------------------------------------------------------------------------------------|
+| `value`  | `number`  | Progress value in percentage. This value should be between 0 and 100.                         |
+| `height` | `string`  | Optional. The height of the progress bar. Defaults to `'1rem'`.                               |
+
+## Example Usage
+
+### Basic ProgressBar
+
+```jsx
+import React from 'react';
+import {ProgressBar} from '@ginger-society/ginger-ui';
+
+const Example: React.FC = () => (
+  <div>
+    <ProgressBar value={50} />
+  </div>
+);
+
+export default Example;
+```
+<ProgressBar value={50} />
+
+### ProgressBar with Custom Height
+
+```jsx
+import React from 'react';
+import ProgressBar from './ProgressBar';
+
+const ExampleWithCustomHeight: React.FC = () => (
+  <div>
+    <ProgressBar value={75} height="2rem" />
+  </div>
+);
+
+export default ExampleWithCustomHeight;
+```

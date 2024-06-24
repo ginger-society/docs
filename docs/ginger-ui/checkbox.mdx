@@ -1,0 +1,43 @@
+---
+sidebar_label: Checkbox
+---
+import { Example } from '../../src/components/CheckboxExample';
+
+
+# Checkbox
+
+The `Checkbox` component provides a standard checkbox input element with an optional label.
+
+## Example Usage
+
+```jsx
+import React, { useState } from 'react';
+import { Checkbox } from '@ginger-society/ginger-ui';
+
+export const Example = () => {
+  const [checked, setChecked] = useState(false);
+
+  const handleCheckboxChange = (newChecked) => {
+    setChecked(newChecked);
+  };
+
+  return (
+    <Checkbox
+      label="Accept Terms and Conditions"
+      checked={checked}
+      onChange={handleCheckboxChange}
+    />
+  );
+};
+```
+<Example />
+
+## Props
+
+### Checkbox
+
+| Prop      | Type                              | Description                                               |
+|-----------|-----------------------------------|-----------------------------------------------------------|
+| `label`   | `string`                          | Optional. Label for the checkbox.                         |
+| `checked` | `boolean`                         | Required. Indicates whether the checkbox is checked.      |
+| `onChange`| `(checked: boolean) => void`      | Optional. Callback function called when the checkbox state changes. |

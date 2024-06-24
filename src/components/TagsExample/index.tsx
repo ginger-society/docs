@@ -1,5 +1,5 @@
 import { Tags, TagsOption } from "@ginger-society/ginger-ui";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const TagsExample = () => {
   const [tags, setTags] = useState<TagsOption[]>([
