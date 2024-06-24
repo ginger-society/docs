@@ -1,19 +1,18 @@
 ---
-sidebar_label: AsideWindow
+sidebar_label: Aside
 ---
 
 import {AsideExample} from '../../src/components/AsideExample'
 
-# AsideWindow
+# Aside
 
-The `AsideWindow` component is a modal-like side panel that slides in from the side of the screen, typically used for additional content or actions without navigating away from the main content.
+The `Aside` component is a modal-like side panel that slides in from the side of the screen, typically used for additional content or actions without navigating away from the main content.
 
 ## Example Usage
 
 ```jsx
 import React, { useState } from 'react';
-import { Text, TextSize } from '@ginger-society/ginger-ui/typography';
-import { AsideWindow } from '@ginger-society/ginger-ui';
+import { Text, TextSize, Aside } from '@ginger-society/ginger-ui';
 
 export const AsideExample = () => {
   const [isSliderOpen, setIsSliderOpen] = useState(false);
@@ -21,7 +20,7 @@ export const AsideExample = () => {
   return (
     <>
       <button onClick={() => setIsSliderOpen(true)}>Open Aside</button>
-      <AsideWindow isOpen={isSliderOpen} onClose={() => setIsSliderOpen(false)}>
+      <Aside isOpen={isSliderOpen} onClose={() => setIsSliderOpen(false)}>
         <Text tag="h1" size={TextSize.Large}>
           Example heading
         </Text>
@@ -30,7 +29,7 @@ export const AsideExample = () => {
           explicabo delectus in quae quisquam eveniet tempora dolor quia,
           repellat a illum maxime nobis laborum vel alias ipsam. Unde?
         </Text>
-      </AsideWindow>
+      </Aside>
     </>
   );
 }
@@ -54,8 +53,7 @@ export const AsideExample = () => {
 
 ```jsx
 import React, { useState } from 'react';
-import { Text, TextSize } from '@ginger-society/ginger-ui/typography';
-import { AsideWindow } from '@ginger-society/ginger-ui';
+import { Text, TextSize, Aside } from '@ginger-society/ginger-ui';
 
 const BasicAsideWindow: React.FC = () => {
   const [isSliderOpen, setIsSliderOpen] = useState(false);
@@ -63,14 +61,14 @@ const BasicAsideWindow: React.FC = () => {
   return (
     <>
       <button onClick={() => setIsSliderOpen(true)}>Open Aside</button>
-      <AsideWindow isOpen={isSliderOpen} onClose={() => setIsSliderOpen(false)}>
+      <Aside isOpen={isSliderOpen} onClose={() => setIsSliderOpen(false)}>
         <Text tag="h1" size={TextSize.Large}>
           Basic Example
         </Text>
         <Text>
           This is a basic example of an aside window with some text content.
         </Text>
-      </AsideWindow>
+      </Aside>
     </>
   );
 };
