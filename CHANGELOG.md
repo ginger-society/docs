@@ -1,4 +1,11 @@
+## 0.3.0-nightly.0 - 2024-06-28
+feat:
+ - [7b0df4dea4](7b0df4dea495365a297e40f1a0350437794e5846) (Ginger Society Admin) feat: added documentation for connector , relaser and scaffolder
+	
 ## 0.2.0-nightly.0 - 2024-06-28
+chore:
+ - [74b0f0f5fc](74b0f0f5fca7806b9b4016ce5034649abfe7d431) (Ginger Society Admin) chore: version bump to 0.2.0-nightly.0
+	
 feat:
  - [67e1357801](67e135780199b2e3bd0a5a56721aeb0160515086) (Ginger Society Admin) feat: added changelog in git
 	
