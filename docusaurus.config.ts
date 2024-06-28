@@ -79,6 +79,24 @@ const config: Config = {
           label: 'GingerUI',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'gingerConnectorSidebar',
+          position: 'left',
+          label: 'GingerConnector',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'gingerScaffolderSidebar',
+          position: 'left',
+          label: 'GingerScaffolder',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'gingerReleaserSidebar',
+          position: 'left',
+          label: 'GingerReleaser',
+        },
+        {
           href: 'http://gingersociety.org',
           label: 'Ginger Society Main Website',
           position: 'right', // Positions the link to the right

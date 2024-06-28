@@ -44,6 +44,26 @@ const FeatureList: FeatureItem[] = [
     docsLink: "/docs/ginger-db",
   },
   {
+    title: "GingerScaffolder",
+    img: "/img/ginger-scaffolder.png",
+    description: <>Project scaffolding tool</>,
+    docsLink: "/docs/ginger-scaffolder",
+  },
+  {
+    title: "GingerReleaser",
+    img: "/img/ginger-releaser.png",
+    description: <>Versioning, Changelog and release management CLI tool</>,
+    docsLink: "/docs/ginger-releaser",
+  },
+  {
+    title: "GingerConnector",
+    img: "/img/ginger-connector.png",
+    description: (
+      <>Manages service dependencies in Microservice / Full Stack projects</>
+    ),
+    docsLink: "/docs/ginger-connector",
+  },
+  {
     title: "GingerUI",
     img: "/img/ginger-ui.png",
     description: (
