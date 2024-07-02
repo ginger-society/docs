@@ -1,34 +1,22 @@
+## 0.4.0-nightly.0 - 2024-07-02
+feat:
+ - [a141a65f4d](a141a65f4dd84c8d42428112161c1c6ff9d22d99) (Ginger Society Admin) feat: updated docs for gingerDB
+	
 ## 0.3.0-nightly.0 - 2024-06-28
+chore:
+ - [6dc4504139](6dc4504139fb1be30f6bbaa5987f953fa1868a2a) (Ginger Society Admin) chore: version bump to 0.3.0-nightly.0
+	
 feat:
  - [7b0df4dea4](7b0df4dea495365a297e40f1a0350437794e5846) (Ginger Society Admin) feat: added documentation for connector , relaser and scaffolder
 	
 ## 0.2.0-nightly.0 - 2024-06-28
-chore:
- - [74b0f0f5fc](74b0f0f5fca7806b9b4016ce5034649abfe7d431) (Ginger Society Admin) chore: version bump to 0.2.0-nightly.0
-	
 feat:
  - [67e1357801](67e135780199b2e3bd0a5a56721aeb0160515086) (Ginger Society Admin) feat: added changelog in git
 	
+chore:
+ - [74b0f0f5fc](74b0f0f5fca7806b9b4016ce5034649abfe7d431) (Ginger Society Admin) chore: version bump to 0.2.0-nightly.0
+	
 ## 0.1.0-nightly.0 - 2024-06-28
-fix:
- - [cd27fe33a4](cd27fe33a42e1acefa37cde02915f63b1ad66e27) (Ginger Society Admin) fix: minor corrections
-	
- - [0341e60906](0341e60906fce0c6f2c54a367750cbb955edb0c3) (Ginger Society Admin) fix: updated docs for components - v1 set of components
-	
- - [3374752c6f](3374752c6fb064885531c7598505f138f68d3f52) (Ginger Society Admin) fix: minor typo
-	
- - [1b6f29f16c](1b6f29f16c457f3f9c0ee8356af15a6d092da842) (Ginger Society Admin) fix: linting fixes
-	
- - [81a9aca6ff](81a9aca6ff14623cffb4171e99c4eea75af724a5) (Ginger Society Admin) fix: minor link update
-	
- - [1bb04ea732](1bb04ea73204f7a3b3d335374a4b0ba3393f8862) (Ginger Society Admin) fix: build fixes
-	
- - [3354dcaa1f](3354dcaa1f863b5ca724276a73c1fd8bc4fb25fc) (Ginger Society Admin) fix: build fixes
-	
- - [0c9391c49a](0c9391c49ae9dc67e6cfe8e70419892dc3f1b298) (Ginger Society Admin) fix: theme color update
-	
- - [70de6a3ea0](70de6a3ea0ad0262ecbe2ec6c11020b452da3445) (Ginger Society Admin) fix: build fixes
-	
 chore:
  - [455144a692](455144a692f7b01761a9075f13c98eb8becb2cfd) (Ginger Society Admin) chore: version bump to 0.1.0-nightly.0
 	
@@ -88,4 +76,23 @@ feat:
  - [98acd0b5f3](98acd0b5f3aea45fafa612c66983417b9269f77a) (Ginger Society Admin) feat: changed theme color
 	
  - [99de9d31f4](99de9d31f4e608ee932924f3d650a540550b3811) (Ginger Society Admin) feat: added admin section details
+	
+fix:
+ - [cd27fe33a4](cd27fe33a42e1acefa37cde02915f63b1ad66e27) (Ginger Society Admin) fix: minor corrections
+	
+ - [0341e60906](0341e60906fce0c6f2c54a367750cbb955edb0c3) (Ginger Society Admin) fix: updated docs for components - v1 set of components
+	
+ - [3374752c6f](3374752c6fb064885531c7598505f138f68d3f52) (Ginger Society Admin) fix: minor typo
+	
+ - [1b6f29f16c](1b6f29f16c457f3f9c0ee8356af15a6d092da842) (Ginger Society Admin) fix: linting fixes
+	
+ - [81a9aca6ff](81a9aca6ff14623cffb4171e99c4eea75af724a5) (Ginger Society Admin) fix: minor link update
+	
+ - [1bb04ea732](1bb04ea73204f7a3b3d335374a4b0ba3393f8862) (Ginger Society Admin) fix: build fixes
+	
+ - [3354dcaa1f](3354dcaa1f863b5ca724276a73c1fd8bc4fb25fc) (Ginger Society Admin) fix: build fixes
+	
+ - [0c9391c49a](0c9391c49ae9dc67e6cfe8e70419892dc3f1b298) (Ginger Society Admin) fix: theme color update
+	
+ - [70de6a3ea0](70de6a3ea0ad0262ecbe2ec6c11020b452da3445) (Ginger Society Admin) fix: build fixes
 	
