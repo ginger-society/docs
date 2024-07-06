@@ -1,0 +1,49 @@
+---
+sidebar_label: Layout
+---
+# Layout
+
+A layout is UI that is shared between multiple routes. On navigation, layouts preserve state, remain interactive. Layouts can also be nested.
+
+You can define a layout by default exporting a React component from a layout.jsx file. The component will be populated with a child layout (if it exists) or a page during rendering.
+
+### Server Example
+
+Path Example : `src/app/layout.py`
+```python
+def layout(request):
+    return {"isDev":"true"}
+
+```
+
+Note: Returned data will be accessible through props in Page
+
+### Client Example
+
+Path Example : `src/app/layout.jsx`
+```jsx
+import React from "react";
+import Header from "../components/header";
+import { Outlet } from "react-router-dom";
+
+const Layout = (props) => {
+  return (
+    <div className="p-4">
+      <Header />
+      <Outlet />
+    </div>
+  );
+};
+
+export default Layout;
+
+```
+
+
+For example, the layout will be shared with the /dashboard and /dashboard/settings pages:
+![NextJs layout example image](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fnested-layout.png&w=3840&q=75)
+
+If you were to combine the two layouts above, the root layout (app/layout.jsx) would wrap the dashboard layout (app/dashboard/layout.jsx), which would wrap route segments inside app/dashboard/*.
+
+The two layouts would be nested as such:
+![NextJs Multi layout example image](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fnested-layouts-ui.png&w=3840&q=75)
