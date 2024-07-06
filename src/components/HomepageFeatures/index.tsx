@@ -83,7 +83,7 @@ const FeatureList: FeatureItem[] = [
         Python on the backend and React on the frontend.
       </>
     ),
-    comingSoon: true,
+    docsLink: "/docs/ginger-js",
   },
   {
     title: "GingerCode",

@@ -1,0 +1,38 @@
+---
+sidebar_label: Roles of folder
+---
+# Roles of folder and files
+
+GingerJs employs a file-system based routing system:
+
+- Folders define routes, with each route corresponding to a path of nested folders, starting from the root directory down to a final folder containing a `index.jsx` file.
+- Files create the UI displayed for each route segment.
+
+## Route Segments
+
+Each folder in the route corresponds to a segment of the URL path.
+
+## Nested Routes
+
+To create a nested route, simply place folders within one another. For instance, you can create a `/dashboard/settings` route by nesting two folders in the app directory.
+
+The `/dashboard/settings` route consists of three segments:
+
+- `/` 
+- `dashboard` 
+- `settings`
+
+## File Conventions
+
+GingerJs provides a set of special files to create UI with specific behavior in nested routes:
+
+| **File**        | **Description**                                     |
+|-----------------|-----------------------------------------------------|
+| `index.py`     | Unique Server route which is used to serve the (index.jsx) and pass props (UI data) from server to client         |
+| `index.jsx`          | Unique UI of a route and makes routes publicly accessible |
+| `middleware.py`  | Middleware functions for processing requests       |
+| `layout.jsx`        | Shared UI for a segment and its children            |
+| `layout.py`        | Used to pass props (UI data) from server to client (layout.jsx)            |
+| `loading.jsx`       | Loading UI for a segment and its children           |
+| `page_not_found.jsx`     | Not found UI for a segment and its children         |
+
