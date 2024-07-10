@@ -1,4 +1,4 @@
-# DB Studio
+# DB Designer
 
 App link : https://db-designer.gingersociety.org/
 
