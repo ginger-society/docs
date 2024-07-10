@@ -1,6 +1,6 @@
 # DB Studio
 
-App link : https://db-studio.gingersociety.org/
+App link : https://db-designer.gingersociety.org/
 
 DB studio is a GUI based schema designer. You can think if it as UML diagram of your database
 
