@@ -80,12 +80,6 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
-          sidebarId: 'gingerJSSidebar',
-          position: 'left',
-          label: 'GingerJS',
-        },
-        {
-          type: 'docSidebar',
           sidebarId: 'gingerConnectorSidebar',
           position: 'left',
           label: 'GingerConnector',

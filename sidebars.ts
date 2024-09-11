@@ -118,44 +118,6 @@ const sidebars: SidebarsConfig = {
       "ginger-ui/aside",
     ],
   }],
-  gingerJSSidebar: [{
-    type: "category",
-    label: "Getting Started",
-    collapsible: false,
-    items: [
-      "ginger-js/index",
-      "ginger-js/installation",
-    ],
-  },{
-    type: "category",
-    label: "Create your first App",
-    collapsible: false,
-    items: [
-      "ginger-js/create-app",
-      {
-        type: "category",
-        label: "Make your first change",
-        collapsible: true,
-        items: [
-          "ginger-js/rolesOfFolder",
-          "ginger-js/layout",
-          "ginger-js/page",
-          "ginger-js/404",
-        ],
-      },
-      "ginger-js/dynamic",
-      "ginger-js/api",
-      "ginger-js/theme",
-      "ginger-js/meta-data",
-      "ginger-js/navigate",
-    ],
-  },{
-    type: "category",
-    label: "Auth",
-    items: [
-      "ginger-js/auth",
-    ],
-  }],
 };
 
 
