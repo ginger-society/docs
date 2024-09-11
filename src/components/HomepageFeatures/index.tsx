@@ -75,17 +75,6 @@ const FeatureList: FeatureItem[] = [
     docsLink: "/docs/ginger-ui",
   },
   {
-    title: "GingerJS",
-    img: "/img/ginger-js.png",
-    description: (
-      <>
-        GingerJS is a full stack framework for writing web applications with
-        Python on the backend and React on the frontend.
-      </>
-    ),
-    docsLink: "/docs/ginger-js",
-  },
-  {
     title: "GingerCode",
     img: "/img/ginger-code.png",
     description: <>Container first Code editor.</>,
